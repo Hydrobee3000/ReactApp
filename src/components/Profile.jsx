@@ -1,23 +1,25 @@
+import c from './Profile.module.css';
+
 const Profile = () => {
   return (
-    <div className="content">
+    <div className={c.content}>
       <div>
         <img
-          className="main-image"
+          className={c.image}
           src="https://s01.yapfiles.ru/files/2234441/244963099029212_1_yapfiles.ru_1.png"
         />
       </div>
       <div>
         <img
-          className="logo"
+          className={c.logo}
           src="https://makddu.ru/wp-content/uploads/logotipi-obraztsi-kartinki-8.jpg"
         />
       </div>
       <div>
         post
-        <div>new post</div>
-        <div>post 1</div>
-        <div>post 2</div>
+        <div className={c.posts}>new post</div>
+        <div className={c.item}>post 1</div>
+        <div className={c.item}>post 2</div>
       </div>
     </div>
   );
