@@ -1,27 +1,15 @@
-import c from './Profile.module.css';
+import MyPosts from './Posts/MyPosts'
+import s from './Profile.module.css'
 
 const Profile = () => {
   return (
-    <div className={c.content}>
-      <div>
-        <img
-          className={c.image}
-          src="https://s01.yapfiles.ru/files/2234441/244963099029212_1_yapfiles.ru_1.png"
-        />
-      </div>
-      <div>
-        <img
-          className={c.logo}
-          src="https://makddu.ru/wp-content/uploads/logotipi-obraztsi-kartinki-8.jpg"
-        />
-      </div>
-      <div>
-        post
-        <div className={c.posts}>new post</div>
-        <div className={c.item}>post 1</div>
-        <div className={c.item}>post 2</div>
-      </div>
+    <div>
+      <img
+        className={s.logo}
+        src='https://placepic.ru/wp-content/uploads/2018/01/art-krasivyie-kartinki-Putin-politika-1331294.jpeg'
+      />
+      <MyPosts />
     </div>
-  );
-};
-export default Profile;
+  )
+}
+export default Profile

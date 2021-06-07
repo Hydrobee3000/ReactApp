@@ -1,19 +1,11 @@
-.content {
-  grid-area: c;
-  background-color: #fff;
-}
-
 .image {
   width: 100%;
   max-width: 100%;
 }
 
 .logo {
-  width: 10%;
-}
-
-.posts {
-}
-
-.item {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  padding-right: 10px;
 }
