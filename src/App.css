@@ -6,9 +6,9 @@
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
   min-width: 1200px;
+  background-color: rgb(255, 136, 0);
 }
 
 .app-wrapper-content {
   grid-area: c;
-  background-color: #fff;
 }

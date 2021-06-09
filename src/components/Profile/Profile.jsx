@@ -1,13 +1,11 @@
 import MyPosts from './Posts/MyPosts'
 import s from './Profile.module.css'
+import ProfileInfo from './ProfileInfo/ProfileInfo'
 
 const Profile = () => {
   return (
-    <div>
-      <img
-        className={s.logo}
-        src='https://placepic.ru/wp-content/uploads/2018/01/art-krasivyie-kartinki-Putin-politika-1331294.jpeg'
-      />
+    <div className={s.profile}>
+      <ProfileInfo />
       <MyPosts />
     </div>
   )
