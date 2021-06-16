@@ -9,7 +9,7 @@
   padding: 0;
   width: 20%;
   background-color: rgba(211, 202, 187, 0.5);
-  border-right: 1px solid rgba(211, 202, 187, 0.5);
+  border-right: 1px solid rgba(56, 54, 51, 0.692);
 }
 
 .dialog {
@@ -18,7 +18,7 @@
 
 .dialog a {
   text-decoration: none;
-  color: rgb(253, 148, 28);
+  color: #000;
   font-size: 1em;
   padding-left: 2em;
 }
@@ -28,6 +28,7 @@
 }
 
 .messages {
+  padding: 10px;
 }
 
 .message {
