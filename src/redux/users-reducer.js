@@ -1,10 +1,11 @@
-const ADD_POST = 'ADD_POST'
-const UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT'
+const FOLLOW = 'FOLLOW'
+const UNFOLLOW = 'UNFOLLOW'
 
 let initialState = {
   users: [
     {
       id: 1,
+      followed: true,
       firstName: 'John',
       lastName: 'Milkovych',
       status: 'active',
@@ -12,6 +13,7 @@ let initialState = {
     },
     {
       id: 2,
+      followed: false,
       firstName: 'Sam',
       lastName: 'Smith',
       status: 'I love to live ',
@@ -19,6 +21,7 @@ let initialState = {
     },
     {
       id: 3,
+      followed: false,
       firstName: 'Valera',
       lastName: 'Yopt',
       status: 'run Vasya run',
@@ -30,15 +33,34 @@ let initialState = {
 
 const usersReducer = (state = initialState, action) => {
   switch (action.type) {
+    case FOLLOW:
+      return {
+        ...state,
+        users: state.users.map((user) => {
+          if (user.id === action.userId) {
+            return { ...user, followed: true }
+          }
+          return user
+        }),
+      }
+
+    case UNFOLLOW:
+      return {
+        ...state,
+        users: state.users.map((user) => {
+          if (user.id === action.userId) {
+            return { ...user, followed: false }
+          }
+          return user
+        }),
+      }
+
     default:
       return state
   }
 }
 
-export const addPostActionCreator = () => ({ type: ADD_POST })
-export const updateNewPostTextActionCreator = (text) => ({
-  type: UPDATE_NEW_POST_TEXT,
-  newText: text,
-})
+export const followAC = (userId) => ({ type: FOLLOW, userId })
+export const unfollowAC = (userId) => ({ type: UNFOLLOW, userId })
 
 export default usersReducer
