@@ -3,6 +3,16 @@ import userPhoto from '../../assets/images/user.png'
 import React from 'react'
 
 class Users extends React.Component {
+  constructor(props) {
+    super(props)
+
+    fetch('https://social-network.samuraijs.com/api/1.0/users')
+      .then((response) => response.json())
+      .then((json) => {
+        this.props.setUsers(json.items)
+      })
+  }
+
   getUsers = () => {
     if (this.props.users.length === 0) {
       fetch('https://social-network.samuraijs.com/api/1.0/users')
@@ -16,7 +26,6 @@ class Users extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.getUsers}>Get Users</button>
         {this.props.users.map((user) => (
           <div key={user.id}>
             <div>
