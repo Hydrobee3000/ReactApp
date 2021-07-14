@@ -5,3 +5,7 @@
   background-color: #fff;
   border: 2px solid #fff;
 }
+
+.selectedPage {
+  font-weight: bold;
+}
