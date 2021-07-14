@@ -10,6 +10,7 @@ class Users extends React.Component {
       .then((response) => response.json())
       .then((json) => {
         this.props.setUsers(json.items)
+        this.props.setTotalUsersCount(json.totalCount)
       })
   }
 
