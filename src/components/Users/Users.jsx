@@ -4,7 +4,9 @@ import React from 'react'
 
 class Users extends React.Component {
   componentDidMount() {
-    fetch('https://social-network.samuraijs.com/api/1.0/users')
+    fetch(
+      `https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`
+    )
       .then((response) => response.json())
       .then((json) => {
         this.props.setUsers(json.items)
@@ -12,7 +14,7 @@ class Users extends React.Component {
   }
 
   render() {
-    let pagesCount = this.props.totalUsersCount / this.props.pageSize
+    let pagesCount = Math.ceil(this.props.totalUsersCount / this.props.pageSize)
 
     let pages = []
     for (let i = 1; i <= pagesCount; i++) {
