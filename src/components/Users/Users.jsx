@@ -8,6 +8,7 @@ let Users = (props) => {
   for (let i = 1; i <= pagesCount; i++) {
     pages.push(i)
   }
+
   return (
     <div>
       <div>
