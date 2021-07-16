@@ -8,16 +8,18 @@ import {
   toggleIsFetchingAC,
 } from '../../redux/users-reducer'
 import React from 'react'
-import preloader from '../../assets/images/preloader.svg'
 import Users from './Users'
+import Preloader from '../common/Preloader/Preloader'
 
 class UsersContainer extends React.Component {
   componentDidMount() {
+    this.props.toggleIsFetching(true)
     fetch(
       `https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`
     )
       .then((response) => response.json())
       .then((json) => {
+        this.props.toggleIsFetching(false)
         this.props.setUsers(json.items)
         this.props.setTotalUsersCount(json.totalCount)
       })
@@ -25,11 +27,13 @@ class UsersContainer extends React.Component {
 
   onPageChanged = (pageNumber) => {
     this.props.setCurrentPage(pageNumber)
+    this.props.toggleIsFetching(true)
     fetch(
       `https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`
     )
       .then((response) => response.json())
       .then((json) => {
+        this.props.toggleIsFetching(false)
         this.props.setUsers(json.items)
       })
   }
@@ -37,7 +41,7 @@ class UsersContainer extends React.Component {
   render() {
     return (
       <>
-        {this.props.isFetching ? <img src={preloader} /> : null}
+        {this.props.isFetching ? <Preloader /> : null}
         <Users
           totalUsersCount={this.props.totalUsersCount}
           pageSize={this.props.pageSize}
