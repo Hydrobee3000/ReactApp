@@ -1,13 +1,22 @@
+import s from './Users.module.css'
+import userPhoto from '../../assets/images/user.png'
+
 let Users = (props) => {
+  let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)
+
+  let pages = []
+  for (let i = 1; i <= pagesCount; i++) {
+    pages.push(i)
+  }
   return (
     <div>
       <div>
         {pages.map((p) => {
           return (
             <span
-              className={this.props.currentPage === p && s.selectedPage}
+              className={props.currentPage === p && s.selectedPage}
               onClick={(e) => {
-                this.onPageChanged(p)
+                props.onPageChanged(p)
               }}
             >
               {p}
@@ -16,7 +25,7 @@ let Users = (props) => {
         })}
       </div>
 
-      {this.props.users.map((user) => (
+      {props.users.map((user) => (
         <div key={user.id}>
           <div>
             <div>
@@ -30,7 +39,7 @@ let Users = (props) => {
               {user.followed ? (
                 <button
                   onClick={() => {
-                    this.props.unfollow(user.id)
+                    props.unfollow(user.id)
                   }}
                 >
                   Unfollow
@@ -38,7 +47,7 @@ let Users = (props) => {
               ) : (
                 <button
                   onClick={() => {
-                    this.props.follow(user.id)
+                    props.follow(user.id)
                   }}
                 >
                   Follow
@@ -60,3 +69,5 @@ let Users = (props) => {
     </div>
   )
 }
+
+export default Users
