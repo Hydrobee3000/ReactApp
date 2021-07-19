@@ -10,13 +10,13 @@ import {
 import React from 'react'
 import Users from './Users'
 import Preloader from '../common/Preloader/Preloader'
+import { getUsers } from '../api/api'
 
 class UsersContainer extends React.Component {
   componentDidMount() {
     this.props.toggleIsFetching(true)
-    fetch(
-      `https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`
-    )
+
+    getUsers(this.props.currentPage, this.props.pageSize)
       .then((response) => response.json())
       .then((json) => {
         this.props.toggleIsFetching(false)
@@ -28,9 +28,7 @@ class UsersContainer extends React.Component {
   onPageChanged = (pageNumber) => {
     this.props.setCurrentPage(pageNumber)
     this.props.toggleIsFetching(true)
-    fetch(
-      `https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`
-    )
+    getUsers(pageNumber, this.props.pageSize)
       .then((response) => response.json())
       .then((json) => {
         this.props.toggleIsFetching(false)
