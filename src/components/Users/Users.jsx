@@ -43,7 +43,19 @@ const Users = (props) => {
               {user.followed ? (
                 <button
                   onClick={() => {
-                    props.unfollow(user.id)
+                    fetch(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {
+                      method: 'DELETE',
+                      credentials: 'include',
+                      headers: {
+                        'API-KEY': 'd334ed35-7c2b-4f86-86db-09775214dcba',
+                      },
+                    })
+                      .then((response) => response.json())
+                      .then((json) => {
+                        if (json.resultCode == 0) {
+                          props.unfollow(user.id)
+                        }
+                      })
                   }}
                 >
                   Unfollow
@@ -54,10 +66,13 @@ const Users = (props) => {
                     fetch(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {
                       method: 'POST',
                       credentials: 'include',
+                      headers: {
+                        'API-KEY': 'd334ed35-7c2b-4f86-86db-09775214dcba',
+                      },
                     })
                       .then((response) => response.json())
                       .then((json) => {
-                        if (json.resultCode === 0) {
+                        if (json.resultCode == 0) {
                           props.follow(user.id)
                         }
                       })
