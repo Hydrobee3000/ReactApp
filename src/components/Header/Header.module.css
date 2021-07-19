@@ -1,9 +1,21 @@
 .header {
   grid-area: h;
+  display: flex;
   background-color: rgb(255, 136, 0);
   background-image: url(https://api.freelogodesign.org/files/23bfe68f1fd34f8cb61c1be389f9a975/thumb/logo_200x200.png?v=0);
 }
 
 .image {
-  width: 7%;
+  height: 100%;
+  width: auto;
+  margin-right: auto;
+}
+
+.loginBlock {
+  margin-right: 2em;
+  align-self: center;
+}
+
+.loginBlock a {
+  color: #000;
 }
