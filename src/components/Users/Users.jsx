@@ -34,9 +34,7 @@ const Users = (props) => {
               <NavLink to={'/profile/' + user.id}>
                 <img
                   className={s.user_photo}
-                  src={
-                    user.photos.small != null ? user.photos.small : userPhoto
-                  }
+                  src={user.photos.small != null ? user.photos.small : userPhoto}
                   alt='user'
                 />
               </NavLink>
@@ -53,7 +51,16 @@ const Users = (props) => {
               ) : (
                 <button
                   onClick={() => {
-                    props.follow(user.id)
+                    fetch(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {
+                      method: 'POST',
+                      credentials: 'include',
+                    })
+                      .then((response) => response.json())
+                      .then((json) => {
+                        if (json.resultCode === 0) {
+                          props.follow(user.id)
+                        }
+                      })
                   }}
                 >
                   Follow
