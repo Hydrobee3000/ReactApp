@@ -2,19 +2,17 @@ import { useEffect } from 'react'
 import { connect } from 'react-redux'
 import Header from './Header'
 import { setAuthUserData } from '../../redux/auth-reducer'
+import { usersAPI } from '../api/api'
 
 function HeaderContainer(props) {
   useEffect(() => {
-    fetch(`https://social-network.samuraijs.com/api/1.0/auth/me`, {
-      credentials: 'include',
-    })
+    usersAPI.myProfile
       .then((response) => response.json())
       .then((json) => {
         if (json.resultCode === 0) {
           let { id, email, login } = json.data
           props.setAuthUserData(id, email, login)
         }
-        // props.setUsers(json.items)
       })
   })
   return <Header {...props} />
