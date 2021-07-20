@@ -1,5 +1,6 @@
 import { usersAPI } from '../components/api/api'
 import { setAuthUserData } from './auth-reducer'
+import { setUserProfile } from './profile-reducer'
 
 const FOLLOW = 'FOLLOW'
 const UNFOLLOW = 'UNFOLLOW'
@@ -132,16 +133,16 @@ export const unfollow = (userId) => {
   }
 }
 
-// export const getProfile = (userId) => {
-//   return (dispatch) => {
-//     usersAPI
-//       .getProfile(userId)
-//       .then((response) => response.json())
-//       .then((json) => {
-//         dispatch(setUserProfile(json))
-//       })
-//   }
-// }
+export const getProfile = (userId) => {
+  return (dispatch) => {
+    usersAPI
+      .getProfile(userId)
+      .then((response) => response.json())
+      .then((json) => {
+        dispatch(setUserProfile(json))
+      })
+  }
+}
 
 // export const myProfile = () => {
 //   return (dispatch) => {

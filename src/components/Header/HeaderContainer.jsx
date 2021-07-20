@@ -2,12 +2,12 @@ import { useEffect } from 'react'
 import { connect } from 'react-redux'
 import Header from './Header'
 import { setAuthUserData } from '../../redux/auth-reducer'
-import { usersAPI } from '../api/api'
+import { authAPI } from '../api/api'
 
 function HeaderContainer(props) {
   useEffect(() => {
-    usersAPI
-      .authMyProfile()
+    authAPI
+      .me()
       .then((response) => response.json())
       .then((json) => {
         if (json.resultCode === 0) {

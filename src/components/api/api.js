@@ -27,7 +27,10 @@ export const usersAPI = {
   getProfile(userId) {
     return fetch(baseUrl + `profile/${userId}`)
   },
-  authMyProfile() {
+}
+
+export const authAPI = {
+  me() {
     return fetch(baseUrl + `auth/me`, {
       credentials: 'include',
     })
