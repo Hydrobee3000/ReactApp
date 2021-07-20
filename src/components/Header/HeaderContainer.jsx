@@ -6,7 +6,8 @@ import { usersAPI } from '../api/api'
 
 function HeaderContainer(props) {
   useEffect(() => {
-    usersAPI.myProfile
+    usersAPI
+      .authMyProfile()
       .then((response) => response.json())
       .then((json) => {
         if (json.resultCode === 0) {
