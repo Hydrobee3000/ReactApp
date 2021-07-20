@@ -33,11 +33,7 @@ const Users = (props) => {
           <div>
             <div>
               <NavLink to={'/profile/' + user.id}>
-                <img
-                  className={s.user_photo}
-                  src={user.photos.small != null ? user.photos.small : userPhoto}
-                  alt='user'
-                />
+                <img className={s.user_photo} src={user.photos.small != null ? user.photos.small : userPhoto} alt='user' />
               </NavLink>
             </div>
             <div className='button_follow'>
