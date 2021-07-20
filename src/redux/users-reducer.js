@@ -144,18 +144,4 @@ export const getProfile = (userId) => {
   }
 }
 
-// export const myProfile = () => {
-//   return (dispatch) => {
-//     usersAPI
-//       .authMyProfile()
-//       .then((response) => response.json())
-//       .then((json) => {
-//         if (json.resultCode === 0) {
-//           let { id, email, login } = json.data
-//           dispatch(setAuthUserData(id, email, login))
-//         }
-//       })
-//   }
-// }
-
 export default usersReducer
