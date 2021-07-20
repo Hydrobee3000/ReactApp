@@ -6,7 +6,6 @@ export const usersAPI = {
       credentials: 'include',
     })
   },
-
   followUser(user) {
     return fetch(baseUrl + `/follow/${user.id}`, {
       method: 'POST',
@@ -16,7 +15,6 @@ export const usersAPI = {
       },
     })
   },
-
   unfollowUser(user) {
     return fetch(baseUrl + `follow/${user.id}`, {
       method: 'DELETE',
