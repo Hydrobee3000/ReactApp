@@ -1,6 +1,7 @@
 import s from './Users.module.css'
 import userPhoto from '../../assets/images/user.png'
 import { NavLink } from 'react-router-dom'
+import { usersAPI } from '../api/api'
 
 const Users = (props) => {
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)
@@ -43,13 +44,8 @@ const Users = (props) => {
               {user.followed ? (
                 <button
                   onClick={() => {
-                    fetch(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {
-                      method: 'DELETE',
-                      credentials: 'include',
-                      headers: {
-                        'API-KEY': 'd334ed35-7c2b-4f86-86db-09775214dcba',
-                      },
-                    })
+                    usersAPI
+                      .unfollowUser(user)
                       .then((response) => response.json())
                       .then((json) => {
                         if (json.resultCode == 0) {
@@ -63,13 +59,8 @@ const Users = (props) => {
               ) : (
                 <button
                   onClick={() => {
-                    fetch(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`, {
-                      method: 'POST',
-                      credentials: 'include',
-                      headers: {
-                        'API-KEY': 'd334ed35-7c2b-4f86-86db-09775214dcba',
-                      },
-                    })
+                    usersAPI
+                      .followUser(user)
                       .then((response) => response.json())
                       .then((json) => {
                         if (json.resultCode == 0) {

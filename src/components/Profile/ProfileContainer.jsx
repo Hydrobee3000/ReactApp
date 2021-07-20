@@ -3,6 +3,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { setUserProfile } from '../../redux/profile-reducer'
 import { withRouter } from 'react-router-dom'
+import { usersAPI } from '../api/api'
 
 class ProfileContainer extends React.Component {
   componentDidMount() {
@@ -10,7 +11,8 @@ class ProfileContainer extends React.Component {
     if (!userId) {
       userId = 2
     }
-    fetch(`https://social-network.samuraijs.com/api/1.0/profile/` + userId)
+    usersAPI
+      .getProfile(userId)
       .then((response) => response.json())
       .then((json) => {
         this.props.setUserProfile(json)
@@ -28,6 +30,4 @@ let mapStateToProps = (state) => ({
 
 let WithUrlDataContainerComponent = withRouter(ProfileContainer)
 
-export default connect(mapStateToProps, { setUserProfile })(
-  WithUrlDataContainerComponent
-)
+export default connect(mapStateToProps, { setUserProfile })(WithUrlDataContainerComponent)
