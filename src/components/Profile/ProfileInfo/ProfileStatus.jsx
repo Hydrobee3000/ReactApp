@@ -1,30 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-class ProfileStatus extends React.Component {
-  state = {
-    editMode: false,
-  }
-
-  activateEditMode() {
-    this.setState({
-      editMode: true,
-    })
-  }
-
-  render() {
-    return (
-      <div>
-        {this.state.editMode ? (
-          <div>
-            <input value={this.props.status} />
-          </div>
-        ) : (
-          <div>
-            <span onDoubleClick={this.activateEditMode.bind(this)}>{this.props.status}</span>
-          </div>
-        )}
-      </div>
-    )
-  }
+function ProfileStatus(props) {
+  const [editMode, changeEditMode] = useState(false)
+  const activateEditMode = () => changeEditMode(true)
+  const deactivateEditMode = () => changeEditMode(false)
+  return (
+    <div>
+      {editMode ? (
+        <div>
+          <input autoFocus={true} onBlur={deactivateEditMode} value={props.status} />
+        </div>
+      ) : (
+        <div>
+          <span onDoubleClick={activateEditMode}>{props.status}</span>
+        </div>
+      )}
+    </div>
+  )
 }
 export default ProfileStatus
