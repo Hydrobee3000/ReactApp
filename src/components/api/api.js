@@ -25,6 +25,13 @@ export const usersAPI = {
     })
   },
   getProfile(userId) {
+    console.warn('Устаревший метод, используйте profileAPI')
+    return profileAPI.getProfile(userId)
+  },
+}
+
+export const profileAPI = {
+  getProfile(userId) {
     return fetch(baseUrl + `profile/${userId}`)
   },
 }
