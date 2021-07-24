@@ -37,6 +37,13 @@ export const profileAPI = {
   getStatus(userId) {
     return fetch(baseUrl + `status/${userId}`)
   },
+  updateStatus(status) {
+    return fetch(baseUrl + `status`, {
+      method: 'PUT',
+      credentials: 'include',
+      status: status,
+    })
+  },
 }
 
 export const authAPI = {
