@@ -34,6 +34,9 @@ export const profileAPI = {
   getProfile(userId) {
     return fetch(baseUrl + `profile/${userId}`)
   },
+  getStatus(userId) {
+    return fetch(baseUrl + `status/${userId}`)
+  },
 }
 
 export const authAPI = {
