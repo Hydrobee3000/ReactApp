@@ -35,10 +35,10 @@ export const profileAPI = {
     return fetch(baseUrl + `profile/${userId}`)
   },
   getStatus(userId) {
-    return fetch(baseUrl + `status/${userId}`)
+    return fetch(baseUrl + `profile/status/${userId}`)
   },
   updateStatus(status) {
-    return fetch(baseUrl + `status`, {
+    return fetch(baseUrl + `profile/status`, {
       method: 'PUT',
       credentials: 'include',
       status: status,
