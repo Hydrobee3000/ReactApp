@@ -3,7 +3,9 @@ import React, { useState } from 'react'
 function ProfileStatus(props) {
   const [editMode, changeEditMode] = useState(false)
   const activateEditMode = () => changeEditMode(true)
-  const deactivateEditMode = () => changeEditMode(false)
+  const deactivateEditMode = () => {
+    changeEditMode(false)
+  }
   return (
     <div>
       {editMode ? (
