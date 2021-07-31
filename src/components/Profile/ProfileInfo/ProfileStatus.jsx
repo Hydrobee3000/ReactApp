@@ -8,12 +8,17 @@ function ProfileStatus(props) {
     changeEditMode(false)
     props.updateStatus(status)
   }
+  const onStatusChange = (e) => {
+    changeStatus({
+      status: e.currentTarget.value,
+    })
+  }
 
   return (
     <div>
       {editMode ? (
         <div>
-          <input onChange={} autoFocus={true} onBlur={deactivateEditMode} value={status} />
+          <input onChange={onStatusChange} autoFocus={true} onBlur={deactivateEditMode} value={status} />
         </div>
       ) : (
         <div>
