@@ -1,5 +1,4 @@
 import { usersAPI } from '../components/api/api'
-import { setAuthUserData } from './auth-reducer'
 import { setUserProfile } from './profile-reducer'
 
 const FOLLOW = 'FOLLOW'
