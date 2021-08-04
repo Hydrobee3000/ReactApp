@@ -1,3 +1,5 @@
+import { reduxForm } from 'redux-form'
+
 const LoginForm = (props) => {
   return (
     <form>
@@ -16,6 +18,8 @@ const LoginForm = (props) => {
     </form>
   )
 }
+
+const LoginReduxForm = reduxForm({ form: 'login' })(LoginForm)
 
 const Login = (props) => {
   return (
