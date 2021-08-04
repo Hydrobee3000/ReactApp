@@ -83,7 +83,7 @@ export const updateStatus = (status) => (dispatch) => {
     .then((response) => response.json())
     .then((json) => {
       if (json.resultCode === 0) {
-        dispatch(setStatus(status))
+        dispatch(setStatus(json))
       }
     })
 }

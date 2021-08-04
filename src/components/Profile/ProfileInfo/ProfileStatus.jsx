@@ -1,25 +1,41 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-function ProfileStatus(props) {
-  const [editMode, changeEditMode] = useState(false)
-  const [status, changeStatus] = useState(props.status)
-  const deactivateEditMode = () => {
-    changeEditMode(false)
-    props.updateStatus(status)
+class ProfileStatus extends React.Component {
+  state = {
+    editMode: false,
+    status: this.props.status,
   }
 
-  return (
-    <div>
-      {editMode ? (
-        <div>
-          <input onChange={(e) => changeStatus(e.target.value)} autoFocus={true} onBlur={deactivateEditMode} value={status} />
-        </div>
-      ) : (
-        <div>
-          <span onDoubleClick={() => changeEditMode(true)}>{props.status || '----'}</span>
-        </div>
-      )}
-    </div>
-  )
+  activateEditMode = () => {
+    this.setState({ editMode: true })
+  }
+  deactivateEditMode = () => {
+    this.setState({ editMode: false })
+    this.props.updateStatus(this.state.status)
+  }
+  onStatusChange = (e) => {
+    this.setState({ status: e.currentTarget.value })
+  }
+
+  componentDidUpdate() {
+    console.log('componentDidUpdate')
+  }
+
+  render() {
+    return (
+      <div>
+        {this.state.editMode && (
+          <div>
+            <input onChange={this.onStatusChange} autoFocus={true} onBlur={this.deactivateEditMode} value={this.state.status} />
+          </div>
+        )}
+        {!this.state.editMode && (
+          <div>
+            <span onDoubleClick={this.activateEditMode}>{this.props.status || '----'}</span>
+          </div>
+        )}
+      </div>
+    )
+  }
 }
 export default ProfileStatus

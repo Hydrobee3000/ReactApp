@@ -32,7 +32,7 @@ export const usersAPI = {
 
 export const profileAPI = {
   getProfile(userId) {
-    return fetch(baseUrl + `profile/${userId}`)
+    return fetch(baseUrl + `profile/${userId}`, { credentials: 'include' })
   },
   getStatus(userId) {
     return fetch(baseUrl + `profile/status/${userId}`)
@@ -40,8 +40,12 @@ export const profileAPI = {
   updateStatus(status) {
     return fetch(baseUrl + `profile/status`, {
       method: 'PUT',
+      cache: 'no-cache',
       credentials: 'include',
-      status: status,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(status),
     })
   },
 }
