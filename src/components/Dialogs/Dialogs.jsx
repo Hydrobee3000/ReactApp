@@ -33,7 +33,7 @@ const Dialogs = (props) => {
 
 const AddMessageForm = (props) => {
   return (
-    <form>
+    <form onSubmit={props.handleSubmit}>
       <div>
         <textarea value={newMessageBody} onChange={onNewMessageChange} placeholder='Enter your message'></textarea>
       </div>
