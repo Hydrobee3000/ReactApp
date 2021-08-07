@@ -21,12 +21,16 @@ const Dialogs = (props) => {
     props.updateNewMessageBody(body)
   }
 
+  const addNewMessage = () => {
+    alert('hey')
+  }
+
   return (
     <div className={s.dialogs}>
       <div className={s.dialogs__items}>{dialogsElements}</div>
       <div className={s.messages}>
         <div>{messagesElements}</div>
-        <AddMessageFormRedux />
+        <AddMessageFormRedux onSubmit={addNewMessage} />
       </div>
     </div>
   )
