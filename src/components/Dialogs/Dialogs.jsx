@@ -2,6 +2,7 @@ import s from './Dialogs.module.css'
 import DialogItem from './DialogItem/DialogItem'
 import Message from './Message/Message'
 import { Redirect } from 'react-router-dom'
+import { Field } from 'redux-form'
 
 const Dialogs = (props) => {
   let state = props.dialogsPage
@@ -35,7 +36,7 @@ const AddMessageForm = (props) => {
   return (
     <form onSubmit={props.handleSubmit}>
       <div>
-        <textarea value={newMessageBody} onChange={onNewMessageChange} placeholder='Enter your message'></textarea>
+        <Field component='textarea' name='newMessageBody' placeholder='Enter your message' />
       </div>
       <div>
         <button onClick={onSendMessageClick}>Send</button>
