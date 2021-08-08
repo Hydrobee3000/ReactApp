@@ -21,8 +21,8 @@ const Dialogs = (props) => {
     props.updateNewMessageBody(body)
   }
 
-  const addNewMessage = () => {
-    alert('hey')
+  const addNewMessage = (value) => {
+    props.sendMessage(value.newMessageBody)
   }
 
   return (
