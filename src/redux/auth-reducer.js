@@ -51,7 +51,7 @@ export const login = (email, password, rememberMe) => (dispatch) => {
 
 export const logout = () => (dispatch) => {
   authAPI
-    .login()
+    .logout()
     .then((response) => response.json())
     .then((json) => {
       if (json.resultCode === 0) {

@@ -72,6 +72,10 @@ export const authAPI = {
     return fetch(baseUrl + `auth/login`, {
       method: 'DELETE',
       credentials: 'include',
+      headers: {
+        'API-KEY': 'd334ed35-7c2b-4f86-86db-09775214dcba',
+        'Content-Type': 'application/json',
+      },
     })
   },
 }
