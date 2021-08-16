@@ -1,13 +1,12 @@
 import { Field, reduxForm } from 'redux-form'
 import { maxLengthCreator, required } from '../../utils/validators/validarors'
-import { Element } from '../common/FormsControls/FormsControls'
+import { Input } from '../common/FormsControls/FormsControls'
 import { minLengthCreator } from './../../utils/validators/validarors'
 import { connect } from 'react-redux'
 import { login } from './../../redux/auth-reducer'
 import { Redirect } from 'react-router-dom'
 import s from './../common/FormsControls/FormsControls.module.css'
 
-const Input = Element('input')
 const maxLength20 = maxLengthCreator(20)
 const minLength4 = minLengthCreator(4)
 const minLength8 = minLengthCreator(8)
