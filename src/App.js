@@ -9,12 +9,17 @@ import LoginPage from './components/Login/Login'
 import { connect } from 'react-redux'
 import { Component } from 'react'
 import { inititalizeApp } from './redux/app-reducer'
+import Preloader from './components/common/Preloader/Preloader'
 
 class App extends Component {
   componentDidMount() {
     this.props.inititalizeApp()
   }
   render() {
+    if (!this.props.initialized) {
+      return <Preloader />
+    }
+
     return (
       <div className='app-wrapper'>
         <HeaderContainer />
@@ -34,4 +39,4 @@ const mapStateToProps = (state) => ({
   initialized: state.app.initialized,
 })
 
-export default connect(null, { inititalizeApp })(App)
+export default connect(mapStateToProps, { inititalizeApp })(App)
