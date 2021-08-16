@@ -12,7 +12,7 @@ import { inititalizeApp } from './redux/app-reducer'
 
 class App extends Component {
   componentDidMount() {
-    this.props.getAuthUserData()
+    this.props.inititalizeApp()
   }
   render() {
     return (
@@ -29,5 +29,9 @@ class App extends Component {
     )
   }
 }
+
+const mapStateToProps = (state) => ({
+  initialized: state.app.initialized,
+})
 
 export default connect(null, { inititalizeApp })(App)
