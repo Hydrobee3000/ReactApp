@@ -81,7 +81,7 @@ export const toggleIsFetching = (isFetching) => ({
   type: TOGGLE_IS_FETCHING,
   isFetching,
 })
-export const toggleIsFollowingProgress = (isFetching, userId) => ({
+export const toggleFollowingProgress = (isFetching, userId) => ({
   type: TOGGLE_IS_FOLLOWING_PROGRESS,
   isFetching,
   userId,
@@ -91,56 +91,47 @@ export const getUsers = (currentPage, pageSize) => {
   return (dispatch) => {
     dispatch(toggleIsFetching(true))
 
-    usersAPI
-      .getUsers(currentPage, pageSize)
-      .then((response) => response.json())
-      .then((json) => {
-        dispatch(toggleIsFetching(false))
-        dispatch(setUsers(json.items))
-        dispatch(setTotalUsersCount(json.totalCount))
-      })
+    usersAPI.getUsers(currentPage, pageSize).then((data) => {
+      dispatch(toggleIsFetching(false))
+      dispatch(setUsers(data.items))
+      dispatch(setTotalUsersCount(data.totalCount))
+    })
   }
 }
 
 export const follow = (userId) => {
   return (dispatch) => {
-    dispatch(toggleIsFollowingProgress(true, userId))
-    usersAPI
-      .follow(userId)
-      .then((response) => response.json())
-      .then((json) => {
-        if (json.resultCode == 0) {
-          dispatch(followSuccess(userId))
-        }
-        dispatch(toggleIsFollowingProgress(false, userId))
-      })
+    dispatch(toggleFollowingProgress(true, userId))
+    usersAPI.follow(userId).then((response) => {
+      if (response.data.resultCode == 0) {
+        dispatch(followSuccess(userId))
+      }
+      dispatch(toggleFollowingProgress(false, userId))
+    })
   }
 }
 
 export const unfollow = (userId) => {
   return (dispatch) => {
-    dispatch(toggleIsFollowingProgress(true, userId))
-    usersAPI
-      .unfollow(userId)
-      .then((response) => response.json())
-      .then((json) => {
-        if (json.resultCode == 0) {
-          dispatch(unfollowSuccess(userId))
-        }
-        dispatch(toggleIsFollowingProgress(false, userId))
-      })
+    dispatch(toggleFollowingProgress(true, userId))
+    usersAPI.unfollow(userId).then((response) => {
+      if (response.data.resultCode == 0) {
+        dispatch(unfollowSuccess(userId))
+      }
+      dispatch(toggleFollowingProgress(false, userId))
+    })
   }
 }
 
-export const getProfile = (userId) => {
-  return (dispatch) => {
-    usersAPI
-      .getProfile(userId)
-      .then((response) => response.json())
-      .then((json) => {
-        dispatch(setUserProfile(json))
-      })
-  }
-}
+// export const getProfile = (userId) => {
+//   return (dispatch) => {
+//     usersAPI
+//       .getProfile(userId)
+//       .then((response) => response.json())
+//       .then((json) => {
+//         dispatch(setUserProfile(json))
+//       })
+//   }
+// }
 
 export default usersReducer

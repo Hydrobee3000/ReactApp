@@ -1,6 +1,6 @@
+import React from 'react'
 import s from './MyPosts.module.css'
 import Post from './Post/Post'
-import react from 'react'
 import { Field, reduxForm } from 'redux-form'
 import { maxLengthCreator, required } from '../../../utils/validators/validarors'
 import { Element } from '../../common/FormsControls/FormsControls'
@@ -21,12 +21,14 @@ const AddNewPostForm = (props) => {
   )
 }
 
+const AddNewPostFormRedux = reduxForm({ form: 'ProfileAddNewPostForm' })(AddNewPostForm)
+
 const MyPosts = (props) => {
   let postsElements = props.posts.map((post) => <Post message={post.message} likesCount={post.likesCount} />)
 
-  let newPostElement = react.createRef()
+  let newPostElement = React.createRef()
 
-  let onAddPost = (values) => {
+  const onAddPost = (values) => {
     props.addPost(values.newPostText)
   }
 
@@ -38,7 +40,5 @@ const MyPosts = (props) => {
     </div>
   )
 }
-
-const AddNewPostFormRedux = reduxForm({ form: 'ProfileAddNewPostForm' })(AddNewPostForm)
 
 export default MyPosts

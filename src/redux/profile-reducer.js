@@ -48,32 +48,26 @@ const profileReducer = (state = initialState, action) => {
 
 export const addPostActionCreator = (newPostText) => ({ type: ADD_POST, newPostText })
 export const setUserProfile = (profile) => ({ type: SET_USER_PROFILE, profile })
-export const getUserProfile = (userId) => (dispatch) => {
-  usersAPI
-    .getProfile(userId)
-    .then((response) => response.json())
-    .then((json) => {
-      dispatch(setUserProfile(json))
-    })
-}
 export const setStatus = (status) => ({ type: SET_STATUS, status })
-export const getStatus = (userId) => (dispatch) => {
-  profileAPI
-    .getStatus(userId)
-    .then((response) => response.json())
-    .then((json) => {
-      dispatch(setStatus(json))
-    })
+
+export const getUserProfile = (userId) => (dispatch) => {
+  usersAPI.getProfile(userId).then((response) => {
+    dispatch(setUserProfile(response.data))
+  })
 }
+
+export const getStatus = (userId) => (dispatch) => {
+  profileAPI.getStatus(userId).then((response) => {
+    dispatch(setStatus(response.data))
+  })
+}
+
 export const updateStatus = (status) => (dispatch) => {
-  profileAPI
-    .updateStatus(status)
-    .then((response) => response.json())
-    .then((json) => {
-      if (json.resultCode === 0) {
-        dispatch(setStatus(json))
-      }
-    })
+  profileAPI.updateStatus(status).then((response) => {
+    if (response.data.resultCode === 0) {
+      dispatch(setStatus(status))
+    }
+  })
 }
 
 export default profileReducer
