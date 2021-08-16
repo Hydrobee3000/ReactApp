@@ -8,7 +8,7 @@ import HeaderContainer from './components/Header/HeaderContainer'
 import LoginPage from './components/Login/Login'
 import { connect } from 'react-redux'
 import { Component } from 'react'
-import { getAuthUserData } from './redux/auth-reducer'
+import { inititalizeApp } from './redux/app-reducer'
 
 class App extends Component {
   componentDidMount() {
@@ -30,4 +30,4 @@ class App extends Component {
   }
 }
 
-export default connect(null, { getAuthUserData })(App)
+export default connect(null, { inititalizeApp })(App)
