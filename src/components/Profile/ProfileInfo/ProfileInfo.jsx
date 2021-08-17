@@ -2,6 +2,7 @@ import Preloader from '../../common/Preloader/Preloader'
 import s from './ProfileInfo.module.css'
 import userPhoto from '../../../assets/images/user.png'
 import ProfileStatus from './ProfileStatus'
+import ProfileStatusWithHooks from './ProfileStatusWithHooks'
 
 const ProfileInfo = (props) => {
   if (!props.profile) {
@@ -13,7 +14,7 @@ const ProfileInfo = (props) => {
       <img className={s.logo} src={props.profile.photos.large != null ? props.profile.photos.large : userPhoto} alt='' />
       <h1>{props.profile.fullName}</h1>
       <h3>Status: {props.profile.aboutMe}</h3>
-      <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
+      <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus} />
       <h5>facebook: {props.profile.contacts.facebook}</h5>
     </div>
   )
