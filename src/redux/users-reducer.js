@@ -1,5 +1,4 @@
 import { usersAPI } from '../components/api/api'
-import { setUserProfile } from './profile-reducer'
 
 const FOLLOW = 'FOLLOW'
 const UNFOLLOW = 'UNFOLLOW'
@@ -14,7 +13,7 @@ let initialState = {
   pageSize: 5,
   totalUsersCount: 0,
   currentPage: 1,
-  isFetching: false,
+  isFetching: true,
   followingInProgress: [],
 }
 
@@ -87,11 +86,12 @@ export const toggleFollowingProgress = (isFetching, userId) => ({
   userId,
 })
 
-export const requestUsers = (currentPage, pageSize) => {
+export const requestUsers = (page, pageSize) => {
   return (dispatch) => {
     dispatch(toggleIsFetching(true))
+    dispatch(setCurrentPage(page))
 
-    usersAPI.getUsers(currentPage, pageSize).then((data) => {
+    usersAPI.getUsers(page, pageSize).then((data) => {
       dispatch(toggleIsFetching(false))
       dispatch(setUsers(data.items))
       dispatch(setTotalUsersCount(data.totalCount))
