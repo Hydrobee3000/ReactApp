@@ -26,8 +26,6 @@ class MyPosts extends Component {
   render() {
     let postsElements = this.props.posts.map((post) => <Post message={post.message} likesCount={post.likesCount} />)
 
-    let newPostElement = React.createRef()
-
     const onAddPost = (values) => {
       this.props.addPost(values.newPostText)
     }
