@@ -1,4 +1,4 @@
-import { React, Component } from 'react'
+import { React, PureComponent } from 'react'
 import s from './MyPosts.module.css'
 import Post from './Post/Post'
 import { Field, reduxForm } from 'redux-form'
@@ -22,11 +22,7 @@ const AddNewPostForm = (props) => {
 
 const AddNewPostFormRedux = reduxForm({ form: 'ProfileAddNewPostForm' })(AddNewPostForm)
 
-class MyPosts extends Component {
-  shouldComponentUpdate(nextProps, nextState) {
-    return true
-  }
-
+class MyPosts extends PureComponent {
   render() {
     console.log('rerender')
     let postsElements = this.props.posts.map((post) => <Post message={post.message} likesCount={post.likesCount} />)
