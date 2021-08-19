@@ -18,7 +18,7 @@ test('length of posts should be incremented', () => {
   expect(newState.posts.length).toBe(5)
 })
 
-test('value of posts should be right', () => {
+test('value of posts should be correct', () => {
   let action = addPostActionCreator('text')
 
   let newState = profileReducer(state, action)
@@ -27,6 +27,14 @@ test('value of posts should be right', () => {
 })
 
 test('after deliting length of posts should be decrement', () => {
+  let action = deletePost(1)
+
+  let newState = profileReducer(state, action)
+
+  expect(newState.posts.length).toBe(3)
+})
+
+test(`after deliting length shouldn't be decrement if id is incorrect`, () => {
   let action = deletePost(1)
 
   let newState = profileReducer(state, action)
