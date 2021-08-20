@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom'
 
 const User = ({ user, ...props }) => {
   return (
-    <div>
-      <div>
+    <div className={s.userContainer}>
+      <div className={s.userInfo}>
         <div>
           <div>
             <NavLink to={'/profile/' + user.id}>
@@ -38,10 +38,6 @@ const User = ({ user, ...props }) => {
         <div className='info'>
           <div>{user.name}</div>
           <div>{user.status}</div>
-        </div>
-        <div className='location'>
-          <div>{'user.location.country'}</div>
-          <div>{'user.location.city'}</div>
         </div>
       </div>
     </div>
