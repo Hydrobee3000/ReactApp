@@ -1,5 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import s from './Header.module.css'
+import Button from '@material-ui/core/Button'
+import { buttonStyle } from '../common/styles/buttonStyle'
 
 const Header = (props) => {
   return (
@@ -12,10 +14,18 @@ const Header = (props) => {
       <div className={s.loginBlock}>
         {props.isAuth ? (
           <div>
-            {props.login} <button onClick={props.logout}>Log out</button>
+            {props.login}{' '}
+            <Button style={buttonStyle} className={s.button} color='inherit' onClick={props.logout}>
+              Log out
+            </Button>
           </div>
         ) : (
-          <NavLink to={'/login'}>Login</NavLink>
+          <NavLink to={'/login'}>
+            {' '}
+            <Button style={buttonStyle} color='inherit'>
+              Login
+            </Button>
+          </NavLink>
         )}
       </div>
     </header>
