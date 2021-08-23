@@ -9,6 +9,12 @@
 .userContainer {
 }
 
+.buttonFollow {
+  padding-left: 1rem;
+}
+
 .userInfo {
+  padding-bottom: 1rem;
+
   margin-left: 20px;
 }

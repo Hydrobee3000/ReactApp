@@ -2,5 +2,13 @@
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  padding-right: 10px;
+  background-color: #fff;
+  border: 2px solid #fff;
+}
+
+.post {
+  padding-bottom: 1rem;
+}
+
+.like {
 }

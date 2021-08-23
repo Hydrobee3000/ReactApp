@@ -1,15 +1,16 @@
 import s from './Post.module.css'
+import userPhoto from '../../../../assets/images/user.png'
 
 const Post = (props) => {
   return (
-    <div className={s.item}>
-      <img
-        className={s.logo}
-        src='https://скачать-ватсап-бесплатно.рус/wp-content/uploads/2018/10/kartinka-na-avatar-dlya-devushki-9.jpg'
-      />
-      {props.message}
+    <div className={s.post}>
       <div>
-        <span>like</span> {props.likesCount}
+        <img className={s.logo} src={userPhoto} alt='users logo' />
+      </div>
+      {props.message}
+
+      <div>
+        <span className={s.like}>like: {props.likesCount}</span>
       </div>
     </div>
   )

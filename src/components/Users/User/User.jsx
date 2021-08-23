@@ -7,37 +7,34 @@ const User = ({ user, ...props }) => {
     <div className={s.userContainer}>
       <div className={s.userInfo}>
         <div>
-          <div>
-            <NavLink to={'/profile/' + user.id}>
-              <img className={s.userPhoto} src={user.photos.small != null ? user.photos.small : userPhoto} alt='user' />
-            </NavLink>
-          </div>
-          <div className='button_follow'>
-            {user.followed ? (
-              <button
-                disabled={props.followingInProgress.some((id) => id === user.id)}
-                onClick={() => {
-                  props.unfollow(user.id)
-                }}
-              >
-                Unfollow
-              </button>
-            ) : (
-              <button
-                disabled={props.followingInProgress.some((id) => id === user.id)}
-                onClick={() => {
-                  props.follow(user.id)
-                }}
-              >
-                Follow
-              </button>
-            )}
-          </div>
+          <NavLink to={'/profile/' + user.id}>
+            <img className={s.userPhoto} src={user.photos.small != null ? user.photos.small : userPhoto} alt='user' />
+          </NavLink>
         </div>
-
         <div className='info'>
           <div>{user.name}</div>
           <div>{user.status}</div>
+        </div>
+        <div className={s.buttonFollow}>
+          {user.followed ? (
+            <button
+              disabled={props.followingInProgress.some((id) => id === user.id)}
+              onClick={() => {
+                props.unfollow(user.id)
+              }}
+            >
+              Unfollow
+            </button>
+          ) : (
+            <button
+              disabled={props.followingInProgress.some((id) => id === user.id)}
+              onClick={() => {
+                props.follow(user.id)
+              }}
+            >
+              Follow
+            </button>
+          )}
         </div>
       </div>
     </div>
