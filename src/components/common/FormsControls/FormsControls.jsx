@@ -1,4 +1,5 @@
 import s from './FormsControls.module.css'
+import TextField from '@material-ui/core/TextField'
 
 const FormControl = ({ input, meta, child, ...props }) => {
   const hasError = meta.touched && meta.error
@@ -23,7 +24,7 @@ export const Input = (props) => {
   const { input, meta, child, ...restProps } = props
   return (
     <FormControl {...props}>
-      <input {...input} {...restProps} />
+      <TextField {...input} {...restProps} />
     </FormControl>
   )
 }
