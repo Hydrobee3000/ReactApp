@@ -1,12 +1,11 @@
 import s from './Post.module.css'
 import userPhoto from '../../../../assets/images/user.png'
+import UserLogo from '../../../common/UsersLogo/UserLogo'
 
 const Post = (props) => {
   return (
     <div className={s.post}>
-      <div>
-        <img className={s.logo} src={userPhoto} alt='users logo' />
-      </div>
+      <UserLogo />
       {props.message}
 
       <div>
