@@ -7,6 +7,8 @@ import { login } from './../../redux/auth-reducer'
 import { Redirect } from 'react-router-dom'
 import s from './../common/FormsControls/FormsControls.module.css'
 import { makeStyles } from '@material-ui/core/styles'
+import Button from '@material-ui/core/Button'
+import { buttonStyle } from '../common/styles/buttonStyle'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -55,8 +57,8 @@ const LoginForm = (props) => {
           <Field type={'checkbox'} name={'rememberMe'} component={'input'} /> remember me
         </div>
         {props.error && <div className={s.formSummaryError}>{props.error}</div>}
-        <div>
-          <button>Login</button>
+        <div className={s.button}>
+          <Button style={buttonStyle}>Login</Button>
         </div>
       </form>
     </div>
