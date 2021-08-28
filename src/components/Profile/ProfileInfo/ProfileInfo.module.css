@@ -1,5 +1,7 @@
-.info {
-  padding: 10px 0 0 10px;
+.descriptionBlock {
+  display: flex;
+  padding-top: 2em;
+  padding-left: 2em;
 }
 
 .logo {
@@ -8,8 +10,4 @@
   border-radius: 50%;
   background-color: #fff;
   border: 2px solid #def2f1;
-}
-
-.descriptionBlock {
-  padding: 10px;
 }

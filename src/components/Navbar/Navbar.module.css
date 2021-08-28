@@ -7,9 +7,6 @@
   flex-direction: column;
 }
 
-.item {
-}
-
 .item:last-child {
   margin-top: 3em;
   font-size: 1em;
@@ -20,15 +17,15 @@
   text-decoration: none;
   padding-top: 0.7em;
   padding-bottom: 0.7em;
-  color: #def2f1;
-  font-size: 1.2em;
+  color: #2b7a78;
+  font-size: 3vmin;
   padding-left: 3em;
 }
 
 .link:hover {
-  color: #2b7a78;
+  color: #def2f1;
 }
 
 .item a.active {
-  color: #2b7a78;
+  color: #def2f1;
 }
