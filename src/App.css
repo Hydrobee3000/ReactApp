@@ -6,6 +6,8 @@
   grid-template-rows: 12vh 1fr;
   grid-template-columns: 1fr 10fr;
   min-width: 1200px;
+  margin: 0;
+  padding: 0;
 }
 
 .app-wrapper-content {
