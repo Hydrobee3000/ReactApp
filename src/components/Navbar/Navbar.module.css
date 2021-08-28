@@ -20,17 +20,15 @@
   text-decoration: none;
   padding-top: 0.7em;
   padding-bottom: 0.7em;
-  color: #feffff;
+  color: #def2f1;
   font-size: 1.2em;
   padding-left: 3em;
 }
 
 .link:hover {
-  color: #def2f1;
-  background-color: #21363d;
+  color: #2b7a78;
 }
 
 .item a.active {
-  background-color: #21363d;
-  color: #def2f1;
+  color: #2b7a78;
 }
