@@ -3,9 +3,16 @@
 }
 
 .logo {
-  height: 150px;
-  width: 150px;
+  height: 25vh;
+  width: 25vh;
   border-radius: 50%;
   background-color: #fff;
   border: 2px solid #def2f1;
+}
+
+.status {
+  margin-left: 3vh;
+}
+.status h3 {
+  font-size: 3vh;
 }
