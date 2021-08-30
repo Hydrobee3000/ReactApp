@@ -1,8 +1,13 @@
 .post {
-  padding-bottom: 1rem;
+  padding-bottom: 1.3vh;
+}
+
+.postText {
+  font-size: 2.5vh;
 }
 
 .like {
-  font-size: 0.9em;
+  display: block;
+  font-size: 2vh;
   color: rgb(0, 0, 0, 0.5);
 }
