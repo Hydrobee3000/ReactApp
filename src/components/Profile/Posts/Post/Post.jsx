@@ -1,5 +1,4 @@
 import s from './Post.module.css'
-import userPhoto from '../../../../assets/images/user.png'
 import UserLogo from '../../../common/UsersLogo/UserLogo'
 
 const Post = (props) => {
