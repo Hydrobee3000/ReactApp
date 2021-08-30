@@ -18,7 +18,15 @@ const ProfileContainer = (props) => {
     props.getStatus(userId)
   })
 
-  return <Profile {...props} profile={props.profile} status={props.status} updateStatus={props.updateStatus} />
+  return (
+    <Profile
+      {...props}
+      isOwner={!props.match.params.userId}
+      profile={props.profile}
+      status={props.status}
+      updateStatus={props.updateStatus}
+    />
+  )
 }
 
 let mapStateToProps = (state) => ({

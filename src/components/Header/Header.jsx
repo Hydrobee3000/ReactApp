@@ -14,13 +14,14 @@ const Header = (props) => {
       <div className={s.loginBlock}>
         {props.isAuth ? (
           <div>
-            {props.login}
+            {props.login}{' '}
             <Button style={buttonStyle} className={s.button} color='inherit' onClick={props.logout}>
               Log out
             </Button>
           </div>
         ) : (
           <NavLink to={'/login'}>
+            {' '}
             <Button style={buttonStyle} color='inherit'>
               <h3>Login</h3>
             </Button>
