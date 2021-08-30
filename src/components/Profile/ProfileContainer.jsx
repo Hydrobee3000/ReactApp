@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { getUserProfile, getStatus, updateStatus } from '../../redux/profile-reducer'
 import { withRouter } from 'react-router-dom'
 import { compose } from 'redux'
+import { savePhoto } from './../../redux/profile-reducer'
 
 const ProfileContainer = (props) => {
   useEffect(() => {
@@ -25,6 +26,7 @@ const ProfileContainer = (props) => {
       profile={props.profile}
       status={props.status}
       updateStatus={props.updateStatus}
+      savePhoto={props.savePhoto}
     />
   )
 }
@@ -36,4 +38,7 @@ let mapStateToProps = (state) => ({
   isAuth: state.auth.isAuth,
 })
 
-export default compose(connect(mapStateToProps, { getUserProfile, getStatus, updateStatus }), withRouter)(ProfileContainer)
+export default compose(
+  connect(mapStateToProps, { getUserProfile, getStatus, updateStatus, savePhoto }),
+  withRouter
+)(ProfileContainer)
