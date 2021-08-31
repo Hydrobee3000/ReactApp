@@ -9,6 +9,7 @@ import { savePhoto } from './../../redux/profile-reducer'
 const ProfileContainer = (props) => {
   useEffect(() => {
     let userId = props.match.params.userId
+
     if (!userId) {
       userId = props.authorizedUserId
       if (!userId) {

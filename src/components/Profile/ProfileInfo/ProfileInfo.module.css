@@ -3,8 +3,22 @@
 }
 
 .name {
-  font-size: 3vh;
-  padding-left: 1vw;
+  font-size: 4vh;
+}
+
+.photoBlock {
+  display: flex;
+  flex-direction: column;
+}
+.selectImage {
+  max-height: 2%;
+  width: 2%;
+  height: ;
+}
+
+#icon-button-file {
+  width: 3vh;
+  height: 2vh;
 }
 
 .mainPhoto {
@@ -19,5 +33,5 @@
   margin-left: 3vw;
 }
 .status h3 {
-  font-size: 2vw;
+  font-size: 3vh;
 }

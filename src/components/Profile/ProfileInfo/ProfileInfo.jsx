@@ -2,8 +2,24 @@ import Preloader from '../../common/Preloader/Preloader'
 import s from './ProfileInfo.module.css'
 import userPhoto from '../../../assets/images/user.png'
 import ProfileStatus from './ProfileStatus/ProfileStatus'
+import { makeStyles } from '@material-ui/core/styles'
+import IconButton from '@material-ui/core/IconButton'
+import PhotoCamera from '@material-ui/icons/PhotoCamera'
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& > *': {
+      margin: theme.spacing(1),
+    },
+  },
+  input: {
+    display: 'none',
+  },
+}))
 
 const ProfileInfo = (props) => {
+  const classes = useStyles()
+
   if (!props.profile) {
     return <Preloader />
   }
@@ -16,12 +32,33 @@ const ProfileInfo = (props) => {
 
   return (
     <div className={s.descriptionBlock}>
-      <div classname={s.imageAndName}>
-        <img className={s.mainPhoto} src={props.profile.photos.large != null ? props.profile.photos.large : userPhoto} alt='' />
-        {props.isOwner && <input type={'file'} onChange={onMainPhotoSelected} />}
-        <h1 className={s.name}>{props.profile.fullName}</h1>
-      </div>
+      <aside aria-label='photo' className={s.photoBlock}>
+        <div className={s.selectImage}>
+          {props.isOwner && (
+            <div className={classes.root}>
+              <input
+                accept='image/*'
+                className={classes.input}
+                id='icon-button-file'
+                multiple
+                type='file'
+                onChange={onMainPhotoSelected}
+              />
+              <label htmlFor='icon-button-file'>
+                <IconButton color='primary' aria-label='upload picture' component='span'>
+                  <PhotoCamera />
+                </IconButton>
+              </label>
+            </div>
+          )}
+        </div>
+        <div>
+          <img className={s.mainPhoto} src={props.profile.photos.large != null ? props.profile.photos.large : userPhoto} alt='' />
+        </div>
+      </aside>
       <div className={s.status}>
+        <h1 className={s.name}>{props.profile.fullName}</h1>
+
         <h3>Status: {props.profile.aboutMe}</h3>
         <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
       </div>
