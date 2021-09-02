@@ -13,19 +13,22 @@ const Header = (props) => {
       />
       <div className={s.loginBlock}>
         {props.isAuth ? (
-          <div>
-            {props.login}{' '}
-            <Button style={buttonStyle} className={s.button} color='inherit' onClick={props.logout}>
-              Log out
-            </Button>
+          <div className={s.ButtonAndLoginText}>
+            <div className={s.loginText}>{props.login} </div>
+            <div>
+              <Button style={buttonStyle} className={s.button} color='inherit' onClick={props.logout}>
+                Log out
+              </Button>
+            </div>
           </div>
         ) : (
-          <NavLink to={'/login'}>
-            {' '}
-            <Button style={buttonStyle} color='inherit'>
-              <h3>Login</h3>
-            </Button>
-          </NavLink>
+          <div>
+            <NavLink to={'/login'}>
+              <Button style={buttonStyle} className={s.button} color='inherit'>
+                <h3>Login</h3>
+              </Button>
+            </NavLink>
+          </div>
         )}
       </div>
     </header>

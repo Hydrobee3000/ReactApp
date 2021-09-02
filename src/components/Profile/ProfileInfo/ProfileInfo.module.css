@@ -15,10 +15,15 @@
   width: 2%;
   height: ;
 }
+.iconAddedImage {
+  height: 3vh;
+  width: 2vw;
+}
 
 #icon-button-file {
-  width: 3vh;
-  height: 2vh;
+  position: absolute;
+  margin: 0;
+  padding: 0;
 }
 
 .mainPhoto {

@@ -2,19 +2,26 @@
   grid-area: h;
   display: flex;
   background-color: #2b7a78;
-}
-
-.image {
-  max-height: 100%;
-  width: auto;
-  margin-right: auto;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .loginBlock {
-  margin-right: 2em;
+  margin-right: 2vw;
+  margin-left: auto;
   align-self: center;
 }
 
 .loginBlock a {
   color: #000;
+}
+
+.ButtonAndLoginText {
+  display: flex;
+}
+
+.loginText {
+  font-size: 2vh;
+  align-self: center;
+  margin-right: 1vw;
 }
