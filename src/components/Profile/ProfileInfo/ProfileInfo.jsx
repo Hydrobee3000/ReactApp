@@ -10,7 +10,10 @@ const useStyles = makeStyles((theme) => ({
   input: {
     display: 'none',
   },
-  button: {},
+  button: {
+    maxWidth: '3vw',
+    height: 'auto',
+  },
 }))
 
 const ProfileInfo = (props) => {
@@ -29,9 +32,9 @@ const ProfileInfo = (props) => {
   return (
     <div className={s.descriptionBlock}>
       <aside aria-label='photo' className={s.photoBlock}>
-        <div className={s.selectImage}>
+        <div className={classes.root}>
           {props.isOwner && (
-            <div className={s.iconAddedImage}>
+            <div className={s.selectImage}>
               <input
                 accept='image/*'
                 className={classes.input}
@@ -40,18 +43,18 @@ const ProfileInfo = (props) => {
                 onChange={onMainPhotoSelected}
               />
               <label htmlFor='icon-button-file'>
-                <IconButton className={classes.button} color='primary' aria-label='upload picture' component='span'>
-                  <PhotoCamera />
-                </IconButton>
+                <div className={s.icon}>
+                  <IconButton className={classes.button} color='primary' aria-label='upload picture' component='div'>
+                    <PhotoCamera />
+                  </IconButton>
+                </div>
               </label>
             </div>
           )}
-        </div>
-        <div>
           <img className={s.mainPhoto} src={props.profile.photos.large != null ? props.profile.photos.large : userPhoto} alt='' />
         </div>
       </aside>
-      <div className={s.status}>
+      <div className={s.statusAndName}>
         <h1 className={s.name}>{props.profile.fullName}</h1>
 
         <h3>Status: {props.profile.aboutMe}</h3>

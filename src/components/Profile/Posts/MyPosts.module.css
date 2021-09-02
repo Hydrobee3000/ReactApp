@@ -5,6 +5,10 @@
   font-size: 1.6vw;
 }
 
+.postsBlock h3 {
+  font-size: 4vh;
+}
+
 .posts {
   margin-top: 3vh;
 }

@@ -8,22 +8,13 @@
 
 .photoBlock {
   display: flex;
+  position: relative;
   flex-direction: column;
 }
 .selectImage {
   max-height: 2%;
   width: 2%;
-  height: ;
-}
-.iconAddedImage {
-  height: 3vh;
-  width: 2vw;
-}
-
-#icon-button-file {
-  position: absolute;
-  margin: 0;
-  padding: 0;
+  height: 2vh;
 }
 
 .mainPhoto {
@@ -34,9 +25,9 @@
   border: 0.4vh solid #def2f1;
 }
 
-.status {
+.statusAndName {
   margin-left: 3vw;
 }
-.status h3 {
-  font-size: 3vh;
+.statusAndName h3 {
+  font-size: 2.5vh;
 }
