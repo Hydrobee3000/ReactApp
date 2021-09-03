@@ -2,8 +2,6 @@ import { NavLink } from 'react-router-dom'
 import s from './Header.module.css'
 import Button from '@material-ui/core/Button'
 import { buttonStyle } from '../common/styles/buttonStyle'
-import iconBlack from '../../assets/images/icon-black.svg'
-import hydrobee from '../../assets/images/hydrobee.svg'
 
 const Header = (props) => {
   return (

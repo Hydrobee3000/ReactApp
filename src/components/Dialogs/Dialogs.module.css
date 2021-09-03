@@ -4,7 +4,7 @@
 
 .dialogs__items {
   width: 12vw;
-  min-height: 88vh;
+  min-height: 92vh;
   max-height: 100%;
   border-right: 0.2vh solid #2b7a78;
 }
@@ -18,13 +18,10 @@
   font-size: 1vw;
 }
 
-.dialog__item a {
+.link {
   text-decoration: none;
   color: #000;
   font-size: 1vw;
-}
-
-.active {
 }
 
 .messages {
@@ -40,4 +37,20 @@
 
 .message__send_field {
   margin-bottom: 1%;
+}
+
+.form__message {
+  display: flex;
+}
+
+.message__field {
+  min-height: 7vh;
+  min-width: 20%;
+  font-size: 2vh;
+}
+
+.message__button {
+  min-width: 5%;
+  min-height: 20px;
+  font-size: 1em;
 }

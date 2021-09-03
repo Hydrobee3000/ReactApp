@@ -15,6 +15,11 @@
   color: #000;
 }
 
+.auth__button {
+  max-width: 4vw;
+  max-height: 6vh;
+}
+
 .login__block {
   display: flex;
 }

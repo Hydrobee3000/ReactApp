@@ -3,7 +3,7 @@
   grid-template-areas:
     'h h'
     'n c';
-  grid-template-rows: 12vh 1fr;
+  grid-template-rows: 8vh 1fr;
   grid-template-columns: 1fr 30fr;
   min-width: 1200px;
   margin: 0;
