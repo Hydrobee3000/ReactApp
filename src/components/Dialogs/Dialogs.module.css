@@ -3,26 +3,35 @@
 }
 
 .dialogs__items {
-  width: 15%;
-  height: 100%;
-  border-right: 1px solid rgba(56, 54, 51, 0.692);
+  width: 12vw;
+  min-height: 88vh;
+  max-height: 100%;
+  border-right: 0.2vh solid #2b7a78;
 }
 
-.dialog {
-  padding: 20px 15px;
+.dialog__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  font-size: 1vw;
 }
 
-.dialog a {
+.dialog__item a {
   text-decoration: none;
   color: #000;
   font-size: 1em;
-  padding-left: 2em;
 }
 
 .active {
-  background-color: #def2f1;
 }
 
 .messages {
   padding: 10px;
+}
+
+.message__send_field {
+  align-self: flex-end;
+  margin-bottom: 7%;
 }

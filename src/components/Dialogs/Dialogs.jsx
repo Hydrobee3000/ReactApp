@@ -6,9 +6,7 @@ import AddMessageForm from './AddMessageForm/AddMessageForm'
 
 const Dialogs = (props) => {
   let state = props.dialogsPage
-
   let dialogsElements = state.dialogs.map((d) => <DialogItem name={d.name} key={d.id} id={d.id} />)
-
   let messagesElements = state.messages.map((m) => <Message message={m.message} key={m.id} />)
   let newMessageBody = state.newMessageBody
 
@@ -23,9 +21,10 @@ const Dialogs = (props) => {
       <div className={s.dialogs__items}>{dialogsElements}</div>
       <div className={s.messages}>
         <div>{messagesElements}</div>
+        <div className={s.message__send_field}>
+          <AddMessageForm onSubmit={addNewMessage} />
+        </div>
       </div>
-
-      <AddMessageForm onSubmit={addNewMessage} />
     </div>
   )
 }
