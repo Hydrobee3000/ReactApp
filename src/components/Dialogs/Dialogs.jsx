@@ -20,7 +20,7 @@ const Dialogs = (props) => {
     <div className={s.dialogs}>
       <div className={s.dialogs__items}>{dialogsElements}</div>
       <div className={s.messages}>
-        <div>{messagesElements}</div>
+        <div className={s.message__item}>{messagesElements}</div>
         <div className={s.message__send_field}>
           <AddMessageForm onSubmit={addNewMessage} />
         </div>
