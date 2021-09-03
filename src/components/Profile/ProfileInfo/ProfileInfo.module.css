@@ -1,4 +1,4 @@
-.descriptionBlock {
+.description__block {
   display: flex;
 }
 
@@ -6,12 +6,12 @@
   font-size: 4vh;
 }
 
-.photoBlock {
+.photo__block {
   display: flex;
   position: relative;
   flex-direction: column;
 }
-.selectImage {
+.select__image {
   max-height: 2%;
   width: 2%;
   height: 2vh;
@@ -26,9 +26,9 @@
   border: 0.4vh solid #def2f1;
 }
 
-.statusAndName {
+.block__status_name {
   margin-left: 3vw;
 }
-.statusAndName h3 {
+.block__status_name h3 {
   font-size: 2.5vh;
 }
