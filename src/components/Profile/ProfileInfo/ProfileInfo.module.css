@@ -18,8 +18,9 @@
 }
 
 .mainPhoto {
-  height: 25vh;
-  width: 25vh;
+  max-width: 100%;
+  width: 21vh;
+  height: auto;
   border-radius: 50%;
   background-color: #fff;
   border: 0.4vh solid #def2f1;

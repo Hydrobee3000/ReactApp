@@ -4,7 +4,7 @@
     'h h'
     'n c';
   grid-template-rows: 12vh 1fr;
-  grid-template-columns: 1fr 10fr;
+  grid-template-columns: 1fr 30fr;
   min-width: 1200px;
   margin: 0;
   padding: 0;

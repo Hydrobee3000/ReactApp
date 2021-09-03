@@ -1,24 +1,23 @@
 .user {
   display: flex;
   flex-direction: column;
-  max-width: 170px;
-  max-height: 160px;
+  max-width: 10vw;
+  max-height: auto;
   justify-content: center;
-  margin-bottom: 4%;
+  margin-bottom: 4vh;
 }
 
 .imageContainer {
-  width: 90px;
-  height: 90px;
+  width: 6vw;
+  height: auto;
   align-self: center;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.8vh;
 }
 
 .userPhoto {
   max-width: 100%;
   border-radius: 50%;
-  border: 2px solid #def2f1;
-  align-self: center;
+  border: 0.3vh solid #def2f1;
 }
 
 .userInfo {
@@ -33,6 +32,14 @@
   align-self: center;
 }
 
-.buttonFollow {
+.name {
+  font-size: 1vw;
+}
+
+.status {
+  font-size: 0.8vw;
+}
+
+.buttonSubscribe {
   align-self: center;
 }

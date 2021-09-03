@@ -14,7 +14,7 @@ const User = ({ user, ...props }) => {
         <div className={s.name}>{user.name}</div>
         <div className={s.status}>{user.status}</div>
       </div>
-      <div className={s.buttonFollow}>
+      <div className={s.buttonSubscribe}>
         {user.followed ? (
           <button
             disabled={props.followingInProgress.some((id) => id === user.id)}
