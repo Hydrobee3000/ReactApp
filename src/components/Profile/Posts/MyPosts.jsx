@@ -25,14 +25,12 @@ const AddNewPostFormRedux = reduxForm({ form: 'ProfileAddNewPostForm' })(AddNewP
 const MyPosts = (props) => {
   let postsElements = props.posts.map((post) => <Post message={post.message} likesCount={post.likesCount} />)
 
-  // let newPostElement = React.createRef()
-
   const onAddPost = (values) => {
     props.addPost(values.newPostText)
   }
 
   return (
-    <div className={s.postsBlock}>
+    <div className={s.posts__block}>
       <h3>My posts</h3>
       <AddNewPostFormRedux onSubmit={onAddPost} />
       <div className={s.posts}>{postsElements}</div>

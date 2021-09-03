@@ -1,11 +1,11 @@
-.postsBlock {
+.posts__block {
   height: 50%;
   width: 50%;
   font-size: 16px;
   font-size: 1.6vw;
 }
 
-.postsBlock h3 {
+.posts__block h3 {
   font-size: 4vh;
 }
 

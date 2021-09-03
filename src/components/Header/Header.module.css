@@ -2,25 +2,24 @@
   grid-area: h;
   display: flex;
   background-color: #2b7a78;
-  background-repeat: no-repeat;
   background-size: 100%;
 }
 
-.loginBlock {
+.authorization__block {
   margin-right: 2vw;
   margin-left: auto;
   align-self: center;
 }
 
-.loginBlock a {
+.authorization__block a {
   color: #000;
 }
 
-.ButtonAndLoginText {
+.login__block {
   display: flex;
 }
 
-.loginText {
+.login__text {
   font-size: 2vh;
   align-self: center;
   margin-right: 1vw;
