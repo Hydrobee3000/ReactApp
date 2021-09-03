@@ -33,9 +33,9 @@ const Paginator = ({ totalItemsCount, pageSize, currentPage, onPageChanged, port
             <span
               className={cn(
                 {
-                  [s.selectedPage]: currentPage === p,
+                  [s.page__selected]: currentPage === p,
                 },
-                s.pageNumber
+                s.page__number
               )}
               key={p}
               onClick={(e) => {
