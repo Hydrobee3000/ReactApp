@@ -1,4 +1,4 @@
-.user {
+.user__container {
   display: flex;
   flex-direction: column;
   max-width: 10vw;
@@ -7,27 +7,27 @@
   margin-bottom: 4vh;
 }
 
-.imageContainer {
+.image__container {
   width: 6vw;
   height: auto;
   align-self: center;
   margin-bottom: 0.8vh;
 }
 
-.userPhoto {
+.user__photo {
   max-width: 100%;
   border-radius: 50%;
   border: 0.3vh solid #def2f1;
 }
 
-.userInfo {
+.user__info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-self: center;
 }
 
-.userInfo div {
+.user__info div {
   margin-bottom: 0.3em;
   align-self: center;
 }
@@ -40,6 +40,6 @@
   font-size: 0.8vw;
 }
 
-.buttonSubscribe {
+.button__subscribe {
   align-self: center;
 }

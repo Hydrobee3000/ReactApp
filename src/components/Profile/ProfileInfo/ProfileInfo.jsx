@@ -30,11 +30,11 @@ const ProfileInfo = (props) => {
   }
 
   return (
-    <div className={s.descriptionBlock}>
-      <aside aria-label='photo' className={s.photoBlock}>
+    <div className={s.description__block}>
+      <aside aria-label='photo' className={s.photo__block}>
         <div className={classes.root}>
           {props.isOwner && (
-            <div className={s.selectImage}>
+            <div className={s.select__image}>
               <input
                 accept='image/*'
                 className={classes.input}
@@ -43,7 +43,7 @@ const ProfileInfo = (props) => {
                 onChange={onMainPhotoSelected}
               />
               <label htmlFor='icon-button-file'>
-                <div className={s.icon}>
+                <div className={s.icon__image_load}>
                   <IconButton className={classes.button} color='primary' aria-label='upload picture' component='div'>
                     <PhotoCamera />
                   </IconButton>
@@ -51,10 +51,14 @@ const ProfileInfo = (props) => {
               </label>
             </div>
           )}
-          <img className={s.mainPhoto} src={props.profile.photos.large != null ? props.profile.photos.large : userPhoto} alt='' />
+          <img
+            className={s.main__photo}
+            src={props.profile.photos.large != null ? props.profile.photos.large : userPhoto}
+            alt=''
+          />
         </div>
       </aside>
-      <div className={s.statusAndName}>
+      <div className={s.block__status_name}>
         <h1 className={s.name}>{props.profile.fullName}</h1>
 
         <h3>Status: {props.profile.aboutMe}</h3>
