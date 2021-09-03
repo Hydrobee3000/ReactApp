@@ -1,5 +1,6 @@
 import Paginator from '../common/Paginator/Paginator'
 import User from './User/User'
+import s from './Users.module.css'
 
 const Users = (props) => {
   return (
@@ -10,7 +11,7 @@ const Users = (props) => {
         totalItemsCount={props.totalUsersCount}
         pageSize={props.pageSize}
       />
-      <div>
+      <div className={s.users__wrapper}>
         {props.users.map((user) => (
           <User
             user={user}
