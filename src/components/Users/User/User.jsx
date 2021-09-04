@@ -1,8 +1,18 @@
 import s from './User.module.css'
 import userPhoto from '../../../assets/images/user.png'
 import { NavLink } from 'react-router-dom'
+import { ColorButton } from '../../common/Buttons/Buttons'
+import { withStyles, makeStyles } from '@material-ui/core/styles'
+import Button from '@material-ui/core/Button'
 
 const User = ({ user, ...props }) => {
+  const useStyles = makeStyles((theme) => ({
+    margin: {
+      margin: theme.spacing(1),
+    },
+  }))
+  const classes = useStyles()
+
   return (
     <div className={s.user__container}>
       <div className={s.image__container}>
@@ -16,14 +26,17 @@ const User = ({ user, ...props }) => {
       </div>
       <div className={s.button__subscribe}>
         {user.followed ? (
-          <button
+          <ColorButton
+            variant='contained'
+            color='primary'
+            className={classes.margin}
             disabled={props.followingInProgress.some((id) => id === user.id)}
             onClick={() => {
               props.unfollow(user.id)
             }}
           >
             Unfollow
-          </button>
+          </ColorButton>
         ) : (
           <button
             disabled={props.followingInProgress.some((id) => id === user.id)}
