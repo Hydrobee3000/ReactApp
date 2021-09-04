@@ -3,10 +3,10 @@ import Button from '@material-ui/core/Button'
 
 export const ColorButton = withStyles((theme) => ({
   root: {
-    color: theme.palette.getContrastText('#2b7a78'),
+    color: '#def2f1',
     backgroundColor: '#2b7a78',
     '&:hover': {
-      backgroundColor: '#2b7a78',
+      backgroundColor: '#33918d',
     },
   },
 }))(Button)
