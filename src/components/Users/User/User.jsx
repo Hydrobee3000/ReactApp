@@ -1,15 +1,9 @@
 import s from './User.module.css'
 import userPhoto from '../../../assets/images/user.png'
 import { NavLink } from 'react-router-dom'
-import { ColorButton } from '../../common/Buttons/Buttons'
-import { makeStyles } from '@material-ui/core/styles'
+import { ColorButton, useStyles } from '../../common/Buttons/Buttons'
 
 const User = ({ user, ...props }) => {
-  const useStyles = makeStyles((theme) => ({
-    margin: {
-      margin: theme.spacing(1),
-    },
-  }))
   const classes = useStyles()
 
   return (

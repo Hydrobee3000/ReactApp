@@ -11,20 +11,26 @@ export const ColorButton = withStyles((theme) => ({
   },
 }))(Button)
 
-export default function CustomizedButtons() {
-  const classes = useStyles()
+export const useStyles = makeStyles((theme) => ({
+  margin: {
+    margin: theme.spacing(1),
+  },
+}))
 
-  const useStyles = makeStyles((theme) => ({
-    margin: {
-      margin: theme.spacing(1),
-    },
-  }))
+// export default function CustomizedButtons() {
+//   const classes = useStyles()
 
-  return (
-    <div>
-      <ColorButton variant='contained' color='primary' className={classes.margin}>
-        Custom CSS
-      </ColorButton>
-    </div>
-  )
-}
+//   const useStyles = makeStyles((theme) => ({
+//     margin: {
+//       margin: theme.spacing(1),
+//     },
+//   }))
+
+//   return (
+//     <div>
+//       <ColorButton variant='contained' color='primary' className={classes.margin}>
+//         Custom CSS
+//       </ColorButton>
+//     </div>
+//   )
+// }
