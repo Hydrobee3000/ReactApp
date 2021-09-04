@@ -10,10 +10,7 @@ const useStyles = makeStyles((theme) => ({
   input: {
     display: 'none',
   },
-  button: {
-    maxWidth: '3vw',
-    height: 'auto',
-  },
+  button: {},
 }))
 
 const ProfileInfo = (props) => {

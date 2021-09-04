@@ -4,7 +4,7 @@ import UserLogo from '../../../common/UsersLogo/UserLogo'
 const Post = (props) => {
   return (
     <div className={s.post}>
-      <UserLogo />
+      <UserLogo profile={props.profile} />
       <span className={s.postText}>{props.message}</span>
       <span className={s.like}>like: {props.likesCount}</span>
     </div>
