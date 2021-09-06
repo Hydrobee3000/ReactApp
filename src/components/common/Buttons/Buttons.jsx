@@ -5,6 +5,7 @@ export const ColorButton = withStyles((theme) => ({
   root: {
     color: '#def2f1',
     backgroundColor: '#2b7a78',
+    maxWidth: '250px',
     '&:hover': {
       backgroundColor: '#33918d',
     },
