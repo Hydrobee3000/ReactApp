@@ -2,10 +2,13 @@ import { Field, reduxForm } from 'redux-form'
 import { maxLengthCreator, required } from '../../../utils/validators/validarors'
 import { Textarea } from '../../common/FormsControls/FormsControls'
 import s from './../Dialogs.module.css'
+import { ColorButton, useStyles } from '../../common/Buttons/Buttons'
 
 const maxLength50 = maxLengthCreator(50)
 
 const AddMessageForm = (props) => {
+  const classes = useStyles()
+
   return (
     <form onSubmit={props.handleSubmit}>
       <div className={s.form__message}>
@@ -18,7 +21,9 @@ const AddMessageForm = (props) => {
         />
       </div>
       <div className={s.wrapper__button}>
-        <button className={s.message__button}>Send</button>
+        <ColorButton variant='contained' color='primary' className={s.message__button + ' ' + classes.margin}>
+          Send
+        </ColorButton>
       </div>
     </form>
   )
