@@ -14,16 +14,32 @@ import store from './redux/redux-store'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import React from 'react'
+import { makeStyles } from '@material-ui/core'
+import Paper from '@material-ui/core/Paper'
+import Grid from '@material-ui/core/Grid'
+import { useEffect } from 'react'
 
-class App extends Component {
-  componentDidMount() {
-    this.props.inititalizeApp()
-  }
-  render() {
-    if (!this.props.initialized) {
-      return <Preloader />
-    }
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
+}))
 
+const App = (props) => {
+  const classes = useStyles()
+
+  useEffect(() => {
+    props.inititalizeApp()
+  })
+
+  if (!props.initialized) {
+    return <Preloader />
+  } else {
     return (
       <div className='app-wrapper'>
         <HeaderContainer />
