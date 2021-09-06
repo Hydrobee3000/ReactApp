@@ -15,7 +15,6 @@ import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import React from 'react'
 import { makeStyles } from '@material-ui/core'
-import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import { useEffect } from 'react'
 
@@ -41,15 +40,23 @@ const App = (props) => {
     return <Preloader />
   } else {
     return (
-      <div className='app-wrapper'>
-        <HeaderContainer />
-        <Navbar />
-        <div className='app-wrapper-content'>
-          <Route path='/dialogs' render={() => <DialogsContainer />} />
-          <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
-          <Route path='/users' render={() => <UsersContainer />} />
-          <Route path='/login' render={() => <LoginPage />} />
-        </div>
+      <div className={classes.root}>
+        <Grid container>
+          <Grid item xs={12}>
+            <HeaderContainer />
+          </Grid>
+          <Grid item xs={2}>
+            <Navbar />
+          </Grid>
+          <Grid item xs={9}>
+            <div className='app-wrapper-content'>
+              <Route path='/dialogs' render={() => <DialogsContainer />} />
+              <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
+              <Route path='/users' render={() => <UsersContainer />} />
+              <Route path='/login' render={() => <LoginPage />} />
+            </div>
+          </Grid>
+        </Grid>
       </div>
     )
   }
