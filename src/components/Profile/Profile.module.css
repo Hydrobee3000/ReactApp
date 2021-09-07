@@ -1,6 +1,5 @@
 .profile {
   display: flex;
   flex-direction: column;
-  padding-top: 2vh;
   padding-left: 2vw;
 }

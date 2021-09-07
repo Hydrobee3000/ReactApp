@@ -1,22 +1,23 @@
-.name {
-  font-size: 4vh;
-}
-
 .select__image {
   max-height: 2%;
-  width: 2%;
-  height: 2vh;
+  height: 1vh;
+}
+
+.icon__image_load {
 }
 
 .main__photo {
+  align-self: center;
   max-width: 100%;
-  width: 21vh;
-  height: auto;
+  width: auto;
+  height: 21vh;
   border-radius: 50%;
   background-color: #fff;
   border: 0.4vh solid #def2f1;
 }
-
+.name {
+  font-size: 4vh;
+}
 .block__status_name h3 {
   font-size: 2.5vh;
 }

@@ -1,17 +1,19 @@
 .user__container {
   display: flex;
   flex-direction: column;
-  max-width: 10vw;
-  max-height: auto;
+  max-width: 15%;
   justify-content: center;
   margin-bottom: 4vh;
+  margin-left: 2vh;
 }
 
 .image__container {
-  width: 6vw;
+  /* width: 6vw;
+  height: auto; */
+  width: 85%;
   height: auto;
   align-self: center;
-  margin-bottom: 0.8vh;
+  margin-top: 1vh;
 }
 
 .user__photo {
@@ -23,6 +25,29 @@
 .user__info {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.user__details {
+  flex: 1 0 auto;
+}
+
+.user__details .name {
+}
+
+.names {
+  width: 100%;
+}
+
+.status {
+}
+
+.button__wrapper {
+  align-self: center;
+}
+/* .user__info {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-self: center;
 }
@@ -30,7 +55,7 @@
 .user__info div {
   margin-bottom: 0.3em;
   align-self: center;
-}
+} */
 
 .name {
   font-size: 1vw;
