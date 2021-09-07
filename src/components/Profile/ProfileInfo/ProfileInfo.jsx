@@ -5,6 +5,7 @@ import ProfileStatus from './ProfileStatus/ProfileStatus'
 import { makeStyles } from '@material-ui/core/styles'
 import IconButton from '@material-ui/core/IconButton'
 import PhotoCamera from '@material-ui/icons/PhotoCamera'
+import { Grid } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   input: {
@@ -27,40 +28,46 @@ const ProfileInfo = (props) => {
   }
 
   return (
-    <div className={s.description__block}>
-      <aside aria-label='photo' className={s.photo__block}>
-        <div className={classes.root}>
-          {props.isOwner && (
-            <div className={s.select__image}>
-              <input
-                accept='image/*'
-                className={classes.input}
-                id='icon-button-file'
-                type='file'
-                onChange={onMainPhotoSelected}
-              />
-              <label htmlFor='icon-button-file'>
-                <div className={s.icon__image_load}>
-                  <IconButton className={classes.button} color='primary' aria-label='upload picture' component='div'>
-                    <PhotoCamera />
-                  </IconButton>
+    <div className={classes.root}>
+      <Grid container spacing={3}>
+        <Grid item xs={3}>
+          <aside aria-label='photo' className={s.photo__block}>
+            <div className={classes.root}>
+              {props.isOwner && (
+                <div className={s.select__image}>
+                  <input
+                    accept='image/*'
+                    className={classes.input}
+                    id='icon-button-file'
+                    type='file'
+                    onChange={onMainPhotoSelected}
+                  />
+                  <label htmlFor='icon-button-file'>
+                    <div className={s.icon__image_load}>
+                      <IconButton className={classes.button} color='primary' aria-label='upload picture' component='div'>
+                        <PhotoCamera />
+                      </IconButton>
+                    </div>
+                  </label>
                 </div>
-              </label>
+              )}
+              <img
+                className={s.main__photo}
+                src={props.profile.photos.large != null ? props.profile.photos.large : userPhoto}
+                alt=''
+              />
             </div>
-          )}
-          <img
-            className={s.main__photo}
-            src={props.profile.photos.large != null ? props.profile.photos.large : userPhoto}
-            alt=''
-          />
-        </div>
-      </aside>
-      <div className={s.block__status_name}>
-        <h1 className={s.name}>{props.profile.fullName}</h1>
+          </aside>
+        </Grid>
+        <Grid item xs>
+          <div className={s.block__status_name}>
+            <h1 className={s.name}>{props.profile.fullName}</h1>
 
-        <h3>Status: {props.profile.aboutMe}</h3>
-        <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
-      </div>
+            <h3>Status: {props.profile.aboutMe}</h3>
+            <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
+          </div>
+        </Grid>
+      </Grid>
     </div>
   )
 }

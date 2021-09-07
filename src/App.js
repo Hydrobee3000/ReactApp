@@ -14,7 +14,7 @@ import store from './redux/redux-store'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import React from 'react'
-import { makeStyles } from '@material-ui/core'
+import { makeStyles, Paper } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import { useEffect } from 'react'
 
@@ -22,11 +22,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
+  paper: {},
 }))
 
 const App = (props) => {
@@ -43,18 +39,24 @@ const App = (props) => {
       <div className={classes.root}>
         <Grid container>
           <Grid item xs={12}>
-            <HeaderContainer />
+            <Paper>
+              <HeaderContainer />
+            </Paper>
           </Grid>
           <Grid item xs={2}>
-            <Navbar />
+            <Paper>
+              <Navbar />
+            </Paper>
           </Grid>
-          <Grid item xs={9}>
-            <div className='app-wrapper-content'>
-              <Route path='/dialogs' render={() => <DialogsContainer />} />
-              <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
-              <Route path='/users' render={() => <UsersContainer />} />
-              <Route path='/login' render={() => <LoginPage />} />
-            </div>
+          <Grid item xs={10}>
+            <Paper>
+              <div className='app-wrapper-content'>
+                <Route path='/dialogs' render={() => <DialogsContainer />} />
+                <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
+                <Route path='/users' render={() => <UsersContainer />} />
+                <Route path='/login' render={() => <LoginPage />} />
+              </div>
+            </Paper>
           </Grid>
         </Grid>
       </div>

@@ -1,16 +1,7 @@
-.description__block {
-  display: flex;
-}
-
 .name {
   font-size: 4vh;
 }
 
-.photo__block {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-}
 .select__image {
   max-height: 2%;
   width: 2%;
@@ -26,9 +17,6 @@
   border: 0.4vh solid #def2f1;
 }
 
-.block__status_name {
-  margin-left: 3vw;
-}
 .block__status_name h3 {
   font-size: 2.5vh;
 }

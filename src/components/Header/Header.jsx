@@ -84,11 +84,7 @@ const Header = (props) => {
               <MenuIcon />
             </IconButton>
             <Typography variant='h6' className={classes.title}>
-              <img
-                className={s.image}
-                src='https://api.freelogodesign.org/files/23bfe68f1fd34f8cb61c1be389f9a975/thumb/logo_200x200.png?v=0'
-                alt='logo'
-              />
+              HydroBee
             </Typography>
             {props.isAuth ? (
               <div>
