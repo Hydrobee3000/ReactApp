@@ -16,7 +16,6 @@ const User = ({ user, ...props }) => {
           <img className={s.user__photo} src={user.photos.small != null ? user.photos.small : userPhoto} alt='user' />
         </NavLink>
       </CardMedia>
-
       <CardContent className={s.user__details}>
         <Typography className={s.name__wrapper} component='h3' variant='h3'>
           <div className={s.name}>{user.name}</div>

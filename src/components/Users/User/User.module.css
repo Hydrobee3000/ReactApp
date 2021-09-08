@@ -4,6 +4,7 @@
   width: 200px;
   min-width: 150px;
   justify-content: center;
+  margin: 5px;
 }
 
 .image__container {
