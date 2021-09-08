@@ -1,20 +1,34 @@
 .post_container {
   display: flex;
   margin-bottom: 1.3vh;
-  max-height: 10vh;
+  min-height: 13vh;
+  width: 95%;
 }
 
 .image__container {
-  width: 5vw;
+  height: 11vh;
   margin: 1vh;
 }
 
+.details__container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
 .postText {
-  font-size: 2.5vh;
+}
+
+.like__wrapper {
+  margin-left: 5px;
+  min-height: 13vh;
+  width: 8%;
+  background-color: green;
 }
 
 .like {
-  font-size: 2vh;
+  align-self: center;
+
   color: rgb(0, 0, 0, 0.5);
-  background-color: green;
 }

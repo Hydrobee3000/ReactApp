@@ -30,7 +30,7 @@ const ProfileInfo = (props) => {
   return (
     <div className={classes.root}>
       <Grid container>
-        <Grid item xs={2}>
+        <Grid item xs={3}>
           <aside aria-label='photo' className={s.photo__block}>
             <div className={classes.root}>
               {props.isOwner && (

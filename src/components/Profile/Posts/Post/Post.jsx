@@ -11,12 +11,14 @@ const Post = (props) => {
       <CardMedia className={s.image__container} title='user'>
         <UserLogo profile={props.profile} />
       </CardMedia>
-      <CardContent>
-        <div className={s.postText}>{props.message}</div>
-      </CardContent>
-      <CardActions>
-        <div className={s.like}>like: {props.likesCount}</div>
-      </CardActions>
+      <div className={s.details__container}>
+        <CardContent>
+          <div className={s.postText}>{props.message}</div>
+        </CardContent>
+        <CardActions className={s.like__wrapper}>
+          <div className={s.like}>like: {props.likesCount}</div>
+        </CardActions>
+      </div>
     </Card>
   )
 }

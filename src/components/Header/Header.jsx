@@ -10,56 +10,10 @@ import Typography from '@material-ui/core/Typography'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 import AccountCircle from '@material-ui/icons/AccountCircle'
-import Switch from '@material-ui/core/Switch'
-import FormControlLabel from '@material-ui/core/FormControlLabel'
-import FormGroup from '@material-ui/core/FormGroup'
 import MenuItem from '@material-ui/core/MenuItem'
 import Menu from '@material-ui/core/Menu'
 
-// const Header = (props) => {
-//   return (
-//     <header className={s.header}>
-//       <img
-//         className={s.image}
-//         src='https://api.freelogodesign.org/files/23bfe68f1fd34f8cb61c1be389f9a975/thumb/logo_200x200.png?v=0'
-//         alt='logo'
-//       />
-
-//       <div className={s.authorization__block}>
-//         {props.isAuth ? (
-//           <div className={s.login__block}>
-//             <div className={s.login__text}>{props.login} </div>
-//             <div>
-//               <Button style={buttonStyle} className={s.auth__button} color='inherit' onClick={props.logout}>
-//                 Log out
-//               </Button>
-//             </div>
-//           </div>
-//         ) : (
-//           <div className={s.logout__block}>
-//             <NavLink to={'/login'}>
-//               <Button style={buttonStyle} className={s.auth__button} color='inherit'>
-//                 <h3>Login</h3>
-//               </Button>
-//             </NavLink>
-//           </div>
-//         )}
-//       </div>
-//     </header>
-//   )
-// }
-
-const useStyles = makeStyles((theme) => ({
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-}))
-
 const Header = (props) => {
-  const classes = useStyles()
   const [anchorEl, setAnchorEl] = React.useState(null)
   const open = Boolean(anchorEl)
 
@@ -72,13 +26,13 @@ const Header = (props) => {
   }
 
   return (
-    <header className={s.header}>
-      <AppBar position='static'>
+    <header>
+      <AppBar className={s.header} position='static' style={{ backgroundColor: '#2b7a77' }}>
         <Toolbar>
-          <IconButton edge='start' className={classes.menuButton} color='inherit' aria-label='menu'>
+          <IconButton edge='start' className={s.menu__button} color='inherit' aria-label='menu'>
             <MenuIcon />
           </IconButton>
-          <Typography variant='h6' className={classes.title}>
+          <Typography variant='h6' className={s.title}>
             HydroBee
           </Typography>
           {props.isAuth ? (
