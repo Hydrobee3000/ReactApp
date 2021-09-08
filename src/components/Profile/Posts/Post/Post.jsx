@@ -8,7 +8,7 @@ import CardActions from '@material-ui/core/CardActions'
 const Post = (props) => {
   return (
     <Card className={s.post_container}>
-      <CardMedia title='user'>
+      <CardMedia className={s.image__container} title='user'>
         <UserLogo profile={props.profile} />
       </CardMedia>
       <CardContent>
