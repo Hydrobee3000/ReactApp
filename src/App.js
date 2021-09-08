@@ -28,7 +28,7 @@ const App = (props) => {
   } else {
     return (
       <div className='app-wrapper'>
-        <Grid container>
+        <Grid container maxWidth='sm'>
           <Grid item xs={12}>
             <Paper>
               <HeaderContainer />

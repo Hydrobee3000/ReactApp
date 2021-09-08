@@ -14,6 +14,7 @@ const Users = (props) => {
       <div className={s.users__wrapper}>
         {props.users.map((user) => (
           <User
+            className={s.user}
             user={user}
             followingInProgress={props.followingInProgress}
             unfollow={props.unfollow}

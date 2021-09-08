@@ -50,9 +50,6 @@ import Menu from '@material-ui/core/Menu'
 // }
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -76,58 +73,55 @@ const Header = (props) => {
 
   return (
     <header className={s.header}>
-      <div className={classes.root}>
-        <FormGroup></FormGroup>
-        <AppBar position='static'>
-          <Toolbar>
-            <IconButton edge='start' className={classes.menuButton} color='inherit' aria-label='menu'>
-              <MenuIcon />
-            </IconButton>
-            <Typography variant='h6' className={classes.title}>
-              HydroBee
-            </Typography>
-            {props.isAuth ? (
-              <div>
-                <IconButton
-                  aria-label='account of current user'
-                  aria-controls='menu-appbar'
-                  aria-haspopup='true'
-                  onClick={handleMenu}
-                  color='inherit'
-                >
-                  <AccountCircle />
-                </IconButton>
-                <Menu
-                  id='menu-appbar'
-                  anchorEl={anchorEl}
-                  anchorOrigin={{
-                    vertical: 'top',
-                    horizontal: 'right',
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'right',
-                  }}
-                  open={open}
-                  onClose={handleClose}
-                >
-                  <MenuItem onClick={handleClose}>Profile</MenuItem>
-                  <MenuItem onClick={props.logout}>Log out</MenuItem>
-                </Menu>
-              </div>
-            ) : (
-              <div className={s.logout__block}>
-                <NavLink to={'/login'}>
-                  <Button style={buttonStyle} className={s.auth__button} color='inherit'>
-                    <h3>Login</h3>
-                  </Button>
-                </NavLink>
-              </div>
-            )}
-          </Toolbar>
-        </AppBar>
-      </div>
+      <AppBar position='static'>
+        <Toolbar>
+          <IconButton edge='start' className={classes.menuButton} color='inherit' aria-label='menu'>
+            <MenuIcon />
+          </IconButton>
+          <Typography variant='h6' className={classes.title}>
+            HydroBee
+          </Typography>
+          {props.isAuth ? (
+            <div>
+              <IconButton
+                aria-label='account of current user'
+                aria-controls='menu-appbar'
+                aria-haspopup='true'
+                onClick={handleMenu}
+                color='inherit'
+              >
+                <AccountCircle />
+              </IconButton>
+              <Menu
+                id='menu-appbar'
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={open}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem onClick={props.logout}>Log out</MenuItem>
+              </Menu>
+            </div>
+          ) : (
+            <div className={s.logout__block}>
+              <NavLink to={'/login'}>
+                <Button style={buttonStyle} className={s.auth__button} color='inherit'>
+                  <h3>Login</h3>
+                </Button>
+              </NavLink>
+            </div>
+          )}
+        </Toolbar>
+      </AppBar>
     </header>
   )
 }

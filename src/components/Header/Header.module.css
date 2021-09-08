@@ -1,6 +1,5 @@
 .header {
-  background-color: #2b7a78;
-  background-size: 100%;
+  flex-grow: 1;
 }
 
 .authorization__block {

@@ -19,9 +19,9 @@ const User = ({ user, ...props }) => {
 
       <CardContent className={s.user__details}>
         <Typography className={s.name__wrapper} component='h3' variant='h3'>
-          <span className={s.name}>{user.name}</span>
+          <div className={s.name}>{user.name}</div>
         </Typography>
-        <Typography variant='subtitle1' color='textSecondary'>
+        <Typography className={s.status__wrapper} variant='subtitle1' color='textSecondary'>
           <div className={s.status}>{user.status}</div>
         </Typography>
       </CardContent>
