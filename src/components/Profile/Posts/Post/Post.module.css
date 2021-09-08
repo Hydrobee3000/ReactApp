@@ -1,5 +1,7 @@
-.post {
-  padding-bottom: 1.3vh;
+.post_container {
+  display: flex;
+  margin-bottom: 1.3vh;
+  max-height: 10vh;
 }
 
 .postText {
@@ -7,7 +9,7 @@
 }
 
 .like {
-  display: block;
   font-size: 2vh;
   color: rgb(0, 0, 0, 0.5);
+  background-color: green;
 }
