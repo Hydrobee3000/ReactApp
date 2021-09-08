@@ -14,20 +14,11 @@ import store from './redux/redux-store'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import React from 'react'
-import { makeStyles, Paper } from '@material-ui/core'
+import { Paper } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import { useEffect } from 'react'
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {},
-}))
-
 const App = (props) => {
-  const classes = useStyles()
-
   useEffect(() => {
     props.inititalizeApp()
   })
@@ -36,7 +27,7 @@ const App = (props) => {
     return <Preloader />
   } else {
     return (
-      <div className={classes.root}>
+      <div className='app-wrapper'>
         <Grid container>
           <Grid item xs={12}>
             <Paper>

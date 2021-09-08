@@ -17,16 +17,14 @@ const User = ({ user, ...props }) => {
         </NavLink>
       </CardMedia>
 
-      <div className={s.user__info}>
-        <CardContent className={s.user__details}>
-          <Typography className={s.name} component='h3' variant='h3'>
-            <span className={s.names}>{user.name}</span>
-          </Typography>
-          <Typography variant='subtitle1' color='textSecondary'>
-            <div className={s.status}>{user.status}</div>
-          </Typography>
-        </CardContent>
-      </div>
+      <CardContent className={s.user__details}>
+        <Typography className={s.name__wrapper} component='h3' variant='h3'>
+          <span className={s.name}>{user.name}</span>
+        </Typography>
+        <Typography variant='subtitle1' color='textSecondary'>
+          <div className={s.status}>{user.status}</div>
+        </Typography>
+      </CardContent>
       <CardActions className={s.button__wrapper}>
         {user.followed ? (
           <ColorButton
