@@ -1,16 +1,20 @@
+.photo__block {
+}
+
 .select__image {
   max-height: 2%;
   height: 1vh;
 }
 
-.icon__image_load {
+.photo__wrapper {
+  height: 22vh;
+  width: 22vh;
 }
 
 .main__photo {
   align-self: center;
-  max-width: 100%;
+  max-height: 100%;
   width: auto;
-  height: 21vh;
   border-radius: 50%;
   background-color: #fff;
   border: 0.4vh solid #def2f1;
