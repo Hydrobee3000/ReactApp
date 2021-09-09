@@ -41,6 +41,7 @@
 
 .form__message {
   display: flex;
+  flex-direction: column;
 }
 
 .add__message_field {

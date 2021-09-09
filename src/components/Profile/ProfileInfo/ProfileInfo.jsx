@@ -28,46 +28,36 @@ const ProfileInfo = (props) => {
   }
 
   return (
-    <div className={classes.root}>
-      <Grid container>
-        <Grid item xs={2}>
-          <aside aria-label='photo' className={s.photo__block}>
-            {props.isOwner && (
-              <div className={s.select__image}>
-                <input
-                  accept='image/*'
-                  className={classes.input}
-                  id='icon-button-file'
-                  type='file'
-                  onChange={onMainPhotoSelected}
-                />
-                <label htmlFor='icon-button-file'>
-                  <div className={s.icon__image_load}>
-                    <IconButton style={{ color: '#2b7a77' }} color='primary' aria-label='upload picture' component='div'>
-                      <PhotoCamera />
-                    </IconButton>
-                  </div>
-                </label>
+    <div className={s.profile_info__container}>
+      <div className={s.photo__block}>
+        {props.isOwner && (
+          <div className={s.select__image}>
+            <input accept='image/*' className={classes.input} id='icon-button-file' type='file' onChange={onMainPhotoSelected} />
+            <label htmlFor='icon-button-file'>
+              <div className={s.icon__image_load}>
+                <IconButton style={{ color: '#2b7a77' }} color='primary' aria-label='upload picture' component='div'>
+                  <PhotoCamera />
+                </IconButton>
               </div>
-            )}
-            <div className={s.photo__wrapper}>
-              <img
-                className={s.main__photo}
-                src={props.profile.photos.large != null ? props.profile.photos.large : userPhoto}
-                alt=''
-              />
-            </div>
-          </aside>
-        </Grid>
-        <Grid item xs>
-          <div className={s.block__status_name}>
-            <h1 className={s.name}>{props.profile.fullName}</h1>
-
-            <h3>Status: {props.profile.aboutMe}</h3>
-            <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
+            </label>
           </div>
-        </Grid>
-      </Grid>
+        )}
+        <div className={s.photo__wrapper}>
+          <img
+            className={s.main__photo}
+            src={props.profile.photos.large != null ? props.profile.photos.large : userPhoto}
+            alt=''
+          />
+        </div>
+      </div>
+      <div className={s.details__block}>
+        <div className={s.block__status_name}>
+          <h1 className={s.name}>{props.profile.fullName}</h1>
+
+          <h3>Status: {props.profile.aboutMe}</h3>
+          <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
+        </div>
+      </div>
     </div>
   )
 }
