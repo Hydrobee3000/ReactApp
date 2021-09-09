@@ -1,8 +1,10 @@
 .profile_info__container {
   display: flex;
-}
-.photo__block {
   margin-top: 1%;
+  margin-right: 1%;
+}
+
+.photo__block {
   margin-right: 2%;
   min-height: 90px;
   min-width: 90px;
@@ -10,6 +12,7 @@
   width: 20vw;
   max-height: 260px;
   max-width: 260px;
+  padding: 3px;
 }
 .select__image {
   /* max-height: 2%;
@@ -31,6 +34,7 @@
 }
 
 .details__block {
+  width: 50vw;
 }
 
 .name {

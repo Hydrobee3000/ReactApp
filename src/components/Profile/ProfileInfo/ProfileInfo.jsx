@@ -5,7 +5,7 @@ import ProfileStatus from './ProfileStatus/ProfileStatus'
 import { makeStyles } from '@material-ui/core/styles'
 import IconButton from '@material-ui/core/IconButton'
 import PhotoCamera from '@material-ui/icons/PhotoCamera'
-import { Grid } from '@material-ui/core'
+import { Paper } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   input: {
@@ -28,7 +28,7 @@ const ProfileInfo = (props) => {
   }
 
   return (
-    <div className={s.profile_info__container}>
+    <Paper className={s.profile_info__container}>
       <div className={s.photo__block}>
         {props.isOwner && (
           <div className={s.select__image}>
@@ -58,7 +58,7 @@ const ProfileInfo = (props) => {
           <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
         </div>
       </div>
-    </div>
+    </Paper>
   )
 }
 export default ProfileInfo
