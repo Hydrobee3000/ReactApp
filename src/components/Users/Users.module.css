@@ -1,3 +1,8 @@
+.users__page_container {
+  min-height: 100vh;
+  background-color: #ebf7f5;
+}
+
 .users__wrapper {
   display: flex;
   flex-direction: space-between;

@@ -1,5 +1,7 @@
 .profile {
   display: flex;
   flex-direction: column;
+  background-color: #ebf7f5;
+
   padding-left: 1%;
 }

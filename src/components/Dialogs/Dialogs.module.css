@@ -1,5 +1,6 @@
-.dialogs {
+.dialogs__container {
   display: flex;
+  background-color: #ebf5f7;
 }
 
 .dialogs__items {
