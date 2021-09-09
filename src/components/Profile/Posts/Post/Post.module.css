@@ -17,13 +17,13 @@
   justify-content: space-between;
 }
 
-.postText {
+.post__text {
 }
 
 .like__wrapper {
   margin-left: 5px;
   min-height: 13vh;
-  width: 8%;
+  width: 4%;
   background-color: green;
 }
 

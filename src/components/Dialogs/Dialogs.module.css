@@ -43,13 +43,15 @@
   display: flex;
 }
 
-.message__field {
-  min-height: 7vh;
-  min-width: 20%;
+.add__message_field {
+  resize: none;
+  min-height: 15vh;
+  min-width: 20vw;
   font-size: 2vh;
+  margin-bottom: 1vh;
 }
 
-.message__button {
+.add__message_button {
   min-width: 5%;
   min-height: 20px;
   font-size: 1em;

@@ -1,13 +1,9 @@
 .menu {
   display: flex;
   flex-direction: column;
-  background-color: #17252a;
+  background-color: #0e4f4d;
   min-height: 71vh;
   max-height: 100%;
-}
-
-.item:last-child {
-  margin-top: 8vh;
 }
 
 .link {
@@ -15,9 +11,9 @@
   text-decoration: none;
   padding-top: 0.7em;
   padding-bottom: 0.7em;
-  color: #2b7a77;
+  color: #299c97;
   font-size: 3vmin;
-  padding-left: 5vw;
+  padding-left: 2vw;
 }
 
 .link:hover {

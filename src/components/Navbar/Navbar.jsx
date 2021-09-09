@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import s from './Navbar.module.css'
+import Divider from '@material-ui/core/Divider'
 
 const Navbar = () => {
   return (
@@ -29,6 +30,8 @@ const Navbar = () => {
           Weather
         </NavLink>
       </div>
+      <Divider />
+
       <div className={s.item}>
         <NavLink className={s.link} activeClassName={s.active} to='/settings'>
           Settings

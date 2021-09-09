@@ -13,7 +13,7 @@ const Post = (props) => {
       </CardMedia>
       <div className={s.details__container}>
         <CardContent>
-          <div className={s.postText}>{props.message}</div>
+          <div className={s.post__text}>{props.message}</div>
         </CardContent>
         <CardActions className={s.like__wrapper}>
           <div className={s.like}>like: {props.likesCount}</div>

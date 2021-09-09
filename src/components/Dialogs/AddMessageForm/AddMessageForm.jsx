@@ -7,13 +7,11 @@ import { ColorButton, useStyles } from '../../common/Buttons/Buttons'
 const maxLength50 = maxLengthCreator(50)
 
 const AddMessageForm = (props) => {
-  const classes = useStyles()
-
   return (
     <form onSubmit={props.handleSubmit}>
       <div className={s.form__message}>
         <Field
-          className={s.message__field}
+          className={s.add__message_field}
           component={Textarea}
           validate={[required, maxLength50]}
           placeholder='Enter your message'
@@ -21,7 +19,7 @@ const AddMessageForm = (props) => {
         />
       </div>
       <div className={s.wrapper__button}>
-        <ColorButton variant='contained' color='primary' className={s.message__button + ' ' + classes.margin}>
+        <ColorButton variant='contained' color='primary' className={s.add__message_button}>
           Send
         </ColorButton>
       </div>
