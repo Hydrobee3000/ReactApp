@@ -41,12 +41,10 @@ const App = (props) => {
           </Grid>
           <Grid item xs={10}>
             <Paper>
-              <div className='app-wrapper-content'>
-                <Route path='/dialogs' render={() => <DialogsContainer />} />
-                <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
-                <Route path='/users' render={() => <UsersContainer />} />
-                <Route path='/login' render={() => <LoginPage />} />
-              </div>
+              <Route path='/dialogs' render={() => <DialogsContainer />} />
+              <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
+              <Route path='/users' render={() => <UsersContainer />} />
+              <Route path='/login' render={() => <LoginPage />} />
             </Paper>
           </Grid>
         </Grid>

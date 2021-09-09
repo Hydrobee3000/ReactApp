@@ -1,13 +1,14 @@
 .post_container {
   display: flex;
   margin-bottom: 1.3vh;
-  min-height: 13vh;
-  width: 95%;
+  height: 13vh;
+  width: 90%;
 }
 
 .image__container {
-  height: 11vh;
+  align-self: center;
   margin: 1vh;
+  height: 90%;
 }
 
 .details__container {
@@ -21,14 +22,21 @@
 }
 
 .like__wrapper {
-  margin-left: 5px;
-  min-height: 13vh;
   width: 4%;
-  background-color: green;
+  min-width: 15px;
+  background-color: #2b7a77;
 }
 
 .like {
   align-self: center;
+  color: #def2f1;
+  margin-right: auto;
+  margin-left: auto;
+}
 
-  color: rgb(0, 0, 0, 0.5);
+.icon {
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 10px;
+  min-width: 10px;
 }

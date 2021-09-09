@@ -4,6 +4,7 @@ import Card from '@material-ui/core/Card'
 import CardMedia from '@material-ui/core/CardMedia'
 import CardContent from '@material-ui/core/CardContent'
 import CardActions from '@material-ui/core/CardActions'
+import FavoriteBorderRoundedIcon from '@material-ui/icons/FavoriteBorderRounded'
 
 const Post = (props) => {
   return (
@@ -16,7 +17,10 @@ const Post = (props) => {
           <div className={s.post__text}>{props.message}</div>
         </CardContent>
         <CardActions className={s.like__wrapper}>
-          <div className={s.like}>like: {props.likesCount}</div>
+          <div className={s.like}>
+            <FavoriteBorderRoundedIcon className={s.icon} />
+          </div>
+          {/* <span>{props.likesCount}</span> */}
         </CardActions>
       </div>
     </Card>
