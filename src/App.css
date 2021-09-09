@@ -1,16 +1,4 @@
 .app-wrapper {
-  display: grid;
-  grid-template-areas:
-    'h h'
-    'n c';
-  grid-template-rows: 8vh 1fr;
-  grid-template-columns: 1fr 30fr;
-  min-width: 1200px;
-  margin: 0;
-  padding: 0;
-  background-color: #feffff;
-}
-
-.app-wrapper-content {
-  grid-area: c;
+  flex-grow: 1;
+  background-color: #fff;
 }

@@ -1,6 +1,5 @@
 .posts__block {
-  height: 50%;
-  width: 50%;
+  width: 100%;
   font-size: 16px;
   font-size: 1.6vw;
 }
@@ -11,4 +10,15 @@
 
 .posts {
   margin-top: 3vh;
+}
+
+.form__post {
+}
+
+.add__post_field {
+  resize: none;
+  min-height: 15vh;
+  min-width: 20vw;
+  font-size: 2vh;
+  margin-bottom: 1vh;
 }

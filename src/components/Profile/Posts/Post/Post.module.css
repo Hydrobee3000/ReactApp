@@ -1,13 +1,42 @@
-.post {
-  padding-bottom: 1.3vh;
+.post_container {
+  display: flex;
+  margin-bottom: 1.3vh;
+  height: 13vh;
+  margin-right: 1%;
 }
 
-.postText {
-  font-size: 2.5vh;
+.image__container {
+  align-self: center;
+  margin: 1vh;
+  height: 90%;
+}
+
+.details__container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.post__text {
+}
+
+.like__wrapper {
+  width: 4%;
+  min-width: 15px;
+  background-color: #2b7a77;
 }
 
 .like {
-  display: block;
-  font-size: 2vh;
-  color: rgb(0, 0, 0, 0.5);
+  align-self: center;
+  color: #def2f1;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.icon {
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 10px;
+  min-width: 10px;
 }

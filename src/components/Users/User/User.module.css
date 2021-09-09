@@ -1,17 +1,19 @@
 .user__container {
   display: flex;
   flex-direction: column;
-  max-width: 10vw;
-  max-height: auto;
+  width: 200px;
+  min-width: 150px;
   justify-content: center;
-  margin-bottom: 4vh;
+  margin: 5px;
 }
 
 .image__container {
-  width: 6vw;
+  /* width: 6vw;
+  height: auto; */
+  width: 70%;
   height: auto;
   align-self: center;
-  margin-bottom: 0.8vh;
+  margin-top: 1vh;
 }
 
 .user__photo {
@@ -20,26 +22,34 @@
   border: 0.3vh solid #def2f1;
 }
 
-.user__info {
+.user__details {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-self: center;
+  flex: 1 0 auto;
+  padding: 8px;
 }
 
-.user__info div {
-  margin-bottom: 0.3em;
-  align-self: center;
+.name__wrapper {
+  text-align: center;
 }
 
 .name {
-  font-size: 1vw;
+  font-size: 2vh;
+  width: 100%;
+  word-wrap: break-word;
 }
 
+.status__wrapper {
+  text-align: center;
+}
 .status {
-  font-size: 0.8vw;
-  max-width: 9vw;
+  font-size: 2vh;
   word-wrap: break-word;
+}
+
+.button__wrapper {
+  align-self: center;
 }
 
 .button__subscribe {

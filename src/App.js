@@ -14,26 +14,42 @@ import store from './redux/redux-store'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import React from 'react'
+import { Paper } from '@material-ui/core'
+import Grid from '@material-ui/core/Grid'
+import { useEffect } from 'react'
 
-class App extends Component {
-  componentDidMount() {
-    this.props.inititalizeApp()
-  }
-  render() {
-    if (!this.props.initialized) {
-      return <Preloader />
-    }
+const App = (props) => {
+  useEffect(() => {
+    props.inititalizeApp()
+  })
 
+  if (!props.initialized) {
+    return <Preloader />
+  } else {
     return (
       <div className='app-wrapper'>
-        <HeaderContainer />
-        <Navbar />
-        <div className='app-wrapper-content'>
-          <Route path='/dialogs' render={() => <DialogsContainer />} />
-          <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
-          <Route path='/users' render={() => <UsersContainer />} />
-          <Route path='/login' render={() => <LoginPage />} />
-        </div>
+        <Grid container maxWidth='sm'>
+          <Grid item xs={12}>
+            <Paper>
+              <HeaderContainer />
+            </Paper>
+          </Grid>
+          <Grid item xs={2}>
+            <Paper>
+              <Navbar />
+            </Paper>
+          </Grid>
+          <Grid item xs={10}>
+            <Paper>
+              <div className='app-wrapper-content'>
+                <Route path='/dialogs' render={() => <DialogsContainer />} />
+                <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
+                <Route path='/users' render={() => <UsersContainer />} />
+                <Route path='/login' render={() => <LoginPage />} />
+              </div>
+            </Paper>
+          </Grid>
+        </Grid>
       </div>
     )
   }

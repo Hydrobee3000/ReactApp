@@ -1,6 +1,6 @@
 .user__logo {
-  width: 6vw;
-  height: auto;
+  max-height: 100%;
+  width: auto;
   border-radius: 50%;
   border: 0.3vh solid #def2f1;
 }

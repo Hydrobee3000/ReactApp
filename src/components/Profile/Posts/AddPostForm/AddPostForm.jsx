@@ -1,15 +1,18 @@
 import React from 'react'
 import s from '../MyPosts.module.css'
 import { Field, reduxForm } from 'redux-form'
+import { Textarea } from '../../../common/FormsControls/FormsControls'
 
 const AddPostForm = (props) => {
   return (
-    <form onSubmit={props.handleSubmit}>
+    <form className={s.form__post} onSubmit={props.handleSubmit}>
       <div>
-        <Field component={'textarea'} name='postText' />
+        <Field className={s.add__post_field} component={'textarea'} placeholder='Enter your message' name='postText' />
       </div>
       <div>
-        <button>Add post</button>
+        <button variant='contained' color='primary' className={s.add__message_button}>
+          Add post
+        </button>
       </div>
     </form>
   )

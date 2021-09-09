@@ -1,4 +1,7 @@
 .profile {
-  padding-top: 2vh;
-  padding-left: 2vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #ebf7f5;
+
+  padding-left: 1%;
 }

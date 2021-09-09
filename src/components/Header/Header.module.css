@@ -1,8 +1,9 @@
 .header {
-  grid-area: h;
-  display: flex;
-  background-color: #2b7a78;
-  background-size: 100%;
+  flex-grow: 1;
+}
+
+.title {
+  flex-grow: 1;
 }
 
 .authorization__block {
@@ -13,6 +14,10 @@
 
 .authorization__block a {
   color: #000;
+}
+
+.menu__button {
+  margin-right: 2px;
 }
 
 .auth__button {
@@ -28,4 +33,9 @@
   font-size: 2vh;
   align-self: center;
   margin-right: 1vw;
+}
+
+ul a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.884);
 }

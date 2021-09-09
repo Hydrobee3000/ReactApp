@@ -5,6 +5,7 @@ import ProfileStatus from './ProfileStatus/ProfileStatus'
 import { makeStyles } from '@material-ui/core/styles'
 import IconButton from '@material-ui/core/IconButton'
 import PhotoCamera from '@material-ui/icons/PhotoCamera'
+import { Paper } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   input: {
@@ -27,9 +28,9 @@ const ProfileInfo = (props) => {
   }
 
   return (
-    <div className={s.description__block}>
-      <aside aria-label='photo' className={s.photo__block}>
-        <div className={classes.root}>
+    <Paper className={s.profile_info__container}>
+      <div className={s.photo__block}>
+        <div className={s.photo__wrapper}>
           {props.isOwner && (
             <div className={s.select__image}>
               <input
@@ -40,11 +41,9 @@ const ProfileInfo = (props) => {
                 onChange={onMainPhotoSelected}
               />
               <label htmlFor='icon-button-file'>
-                <div className={s.icon__image_load}>
-                  <IconButton className={classes.button} color='primary' aria-label='upload picture' component='div'>
-                    <PhotoCamera />
-                  </IconButton>
-                </div>
+                <IconButton className={s.button__load_image} color='primary' aria-label='upload picture' component='div'>
+                  <PhotoCamera className={s.icon__load_image} />
+                </IconButton>
               </label>
             </div>
           )}
@@ -54,14 +53,16 @@ const ProfileInfo = (props) => {
             alt=''
           />
         </div>
-      </aside>
-      <div className={s.block__status_name}>
-        <h1 className={s.name}>{props.profile.fullName}</h1>
-
-        <h3>Status: {props.profile.aboutMe}</h3>
-        <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
       </div>
-    </div>
+      <div className={s.details__block}>
+        <div className={s.block__status_name}>
+          <h1 className={s.name}>{props.profile.fullName}</h1>
+
+          <h3>Status: {props.profile.aboutMe}</h3>
+          <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
+        </div>
+      </div>
+    </Paper>
   )
 }
 export default ProfileInfo
