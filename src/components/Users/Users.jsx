@@ -5,12 +5,14 @@ import s from './Users.module.css'
 const Users = (props) => {
   return (
     <div className={s.users__container}>
-      <Paginator
-        currentPage={props.currentPage}
-        onPageChanged={props.onPageChanged}
-        totalItemsCount={props.totalUsersCount}
-        pageSize={props.pageSize}
-      />
+      <div className={s.pagination__container}>
+        <Paginator
+          currentPage={props.currentPage}
+          onPageChanged={props.onPageChanged}
+          totalItemsCount={props.totalUsersCount}
+          pageSize={props.pageSize}
+        />
+      </div>
       <div className={s.users__wrapper}>
         {props.users.map((user) => (
           <User

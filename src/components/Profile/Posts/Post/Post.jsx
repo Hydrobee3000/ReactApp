@@ -13,9 +13,7 @@ const Post = (props) => {
         <UserLogo profile={props.profile} />
       </CardMedia>
       <div className={s.details__container}>
-        <CardContent>
-          <div className={s.post__text}>{props.message}</div>
-        </CardContent>
+        <CardContent className={s.post__text}>{props.message}</CardContent>
         <CardActions className={s.like__wrapper}>
           <div className={s.like}>
             <FavoriteBorderRoundedIcon className={s.icon} />

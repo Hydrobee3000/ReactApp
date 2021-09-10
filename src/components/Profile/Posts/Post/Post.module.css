@@ -8,7 +8,7 @@
 .image__container {
   align-self: center;
   margin: 1vh;
-  height: 90%;
+  height: 80%;
 }
 
 .details__container {
@@ -19,7 +19,7 @@
 }
 
 .post__text {
-  font-size: 2vh;
+  font-size: 1em;
 }
 
 .like__wrapper {

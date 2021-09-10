@@ -40,6 +40,10 @@
   margin-bottom: 1%;
 }
 
+.message {
+  font-size: 1em;
+}
+
 .form__message {
   display: flex;
   flex-direction: column;
