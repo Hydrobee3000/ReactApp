@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   background-color: #0e4f4d;
-  min-height: 100vh;
+  min-height: 91vh;
 }
 
 .link {
@@ -10,15 +10,15 @@
   text-decoration: none;
   padding-top: 0.7em;
   padding-bottom: 0.7em;
-  color: #299c97;
+  color: #52aaa6;
   font-size: 3vmin;
   padding-left: 2vw;
 }
 
 .link:hover {
-  color: #f6fdfc;
+  color: #def2f1;
 }
 
 .item a.active {
-  color: #f6fdfc;
+  color: #def2f1;
 }

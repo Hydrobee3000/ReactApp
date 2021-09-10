@@ -2,6 +2,6 @@
   display: flex;
   flex-direction: column;
   background-color: #ebf7f5;
-
+  min-height: 91vh;
   padding-left: 1%;
 }

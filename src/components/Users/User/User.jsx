@@ -28,7 +28,7 @@ const User = ({ user, ...props }) => {
         {user.followed ? (
           <Button
             variant='outlined'
-            color='primary'
+            color='middle'
             className={s.button}
             disabled={props.followingInProgress.some((id) => id === user.id)}
             onClick={() => {
@@ -40,7 +40,7 @@ const User = ({ user, ...props }) => {
         ) : (
           <Button
             variant='contained'
-            color='primary'
+            color='middle'
             className={s.button}
             disabled={props.followingInProgress.some((id) => id === user.id)}
             onClick={() => {

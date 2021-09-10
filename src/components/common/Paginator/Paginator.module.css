@@ -1,9 +1,8 @@
 .paginator {
-  position: relative;
-
-  max-width: 60%;
-  min-width: 30%;
-  margin-left: 10%;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  max-width: 200px;
 }
 
 .page__selected {
@@ -11,8 +10,6 @@
 }
 
 .page__number {
-  margin-left: 1%;
-  margin-right: 1%;
 }
 
 .previous__button {

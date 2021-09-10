@@ -28,12 +28,12 @@ const Paginator = ({ totalItemsCount, pageSize, currentPage, onPageChanged, port
           prev
         </button>
       )}
-      {/* Filtering pages: pages within the portion range and maps render span */}
+      {/* Filtering pages: pages within the portion range and maps render item */}
       {pages
         .filter((page) => page >= leftPortionPageNumber && page <= rightPortionPageNumber)
         .map((page) => {
           return (
-            <span
+            <button
               className={classnames(
                 {
                   [s.page__selected]: currentPage === page, //if the page is current - className = page__selected
@@ -46,7 +46,7 @@ const Paginator = ({ totalItemsCount, pageSize, currentPage, onPageChanged, port
               }}
             >
               {page}
-            </span>
+            </button>
           )
         })}
       {portionCount > portionNumber && ( // button (next) appears if we are not on the last portion

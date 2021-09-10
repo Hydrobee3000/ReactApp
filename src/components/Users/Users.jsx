@@ -4,7 +4,7 @@ import s from './Users.module.css'
 
 const Users = (props) => {
   return (
-    <div className={s.users__page_container}>
+    <div className={s.users__container}>
       <Paginator
         currentPage={props.currentPage}
         onPageChanged={props.onPageChanged}

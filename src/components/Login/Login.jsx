@@ -5,31 +5,19 @@ import { minLengthCreator } from './../../utils/validators/validarors'
 import { connect } from 'react-redux'
 import { login } from './../../redux/auth-reducer'
 import { Redirect } from 'react-router-dom'
-import s from './../common/FormsControls/FormsControls.module.css'
-import { makeStyles } from '@material-ui/core/styles'
+import s from './Login.module.css'
 import Button from '@material-ui/core/Button'
-import { buttonStyle } from '../common/styles/buttonStyle'
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    '& .MuiTextField-root': {
-      margin: theme.spacing(1),
-      width: '25ch',
-    },
-  },
-}))
 
 const maxLength20 = maxLengthCreator(20)
 const minLength4 = minLengthCreator(4)
 const minLength8 = minLengthCreator(8)
 
 const LoginForm = (props) => {
-  const classes = useStyles()
   return (
     <div className={s.login__wrapper}>
       <h1>Login</h1>
-      <form className={classes.root} onSubmit={props.handleSubmit}>
-        <div>
+      <form className={s.login__form} onSubmit={props.handleSubmit}>
+        <div className={s.email__text_field}>
           <Field
             placeholder={'Email'}
             name={'email'}
@@ -40,7 +28,7 @@ const LoginForm = (props) => {
             validate={[required, maxLength20, minLength4]}
           />
         </div>
-        <div>
+        <div className={s.password__text_field}>
           <Field
             placeholder={'Password'}
             name={'password'}
@@ -52,12 +40,12 @@ const LoginForm = (props) => {
             validate={[required, maxLength20, minLength8]}
           />
         </div>
-        <div>
+        <div className={s.checkbox}>
           <Field type={'checkbox'} name={'rememberMe'} component={'input'} /> remember me
         </div>
         {props.error && <div className={s.form__summary_error}>{props.error}</div>}
-        <div className={s.button}>
-          <button style={buttonStyle}>Login</button>
+        <div className={s.button__wrapper}>
+          <button className={s.button}>Login</button>
         </div>
       </form>
     </div>
