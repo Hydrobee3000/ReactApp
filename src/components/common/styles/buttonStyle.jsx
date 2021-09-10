@@ -7,3 +7,5 @@ export const buttonStyle = {
   border: '1px solid #2b7a78',
   borderRadius: '5px',
 }
+
+//styles for custom button

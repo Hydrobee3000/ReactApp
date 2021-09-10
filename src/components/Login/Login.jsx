@@ -25,9 +25,8 @@ const minLength8 = minLengthCreator(8)
 
 const LoginForm = (props) => {
   const classes = useStyles()
-
   return (
-    <div className={s.wrapper}>
+    <div className={s.login__wrapper}>
       <h1>Login</h1>
       <form className={classes.root} onSubmit={props.handleSubmit}>
         <div>

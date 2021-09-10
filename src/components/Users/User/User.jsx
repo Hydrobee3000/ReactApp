@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import CardActions from '@material-ui/core/CardActions'
+import Button from '@material-ui/core/Button'
 
 const User = ({ user, ...props }) => {
   return (
@@ -26,8 +27,8 @@ const User = ({ user, ...props }) => {
       </CardContent>
       <CardActions className={s.button__wrapper}>
         {user.followed ? (
-          <ColorButton
-            variant='contained'
+          <Button
+            variant='outlined'
             color='primary'
             className={s.button}
             disabled={props.followingInProgress.some((id) => id === user.id)}
@@ -36,10 +37,10 @@ const User = ({ user, ...props }) => {
             }}
           >
             Unfollow
-          </ColorButton>
+          </Button>
         ) : (
-          <ColorButton
-            variant='contained'
+          <Button
+            variant='outlined'
             color='primary'
             className={s.button}
             disabled={props.followingInProgress.some((id) => id === user.id)}
@@ -48,7 +49,7 @@ const User = ({ user, ...props }) => {
             }}
           >
             Follow
-          </ColorButton>
+          </Button>
         )}
       </CardActions>
     </Card>

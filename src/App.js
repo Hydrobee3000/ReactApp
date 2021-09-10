@@ -6,17 +6,29 @@ import UsersContainer from './components/Users/UsersContainer'
 import ProfileContainer from './components/Profile/ProfileContainer'
 import HeaderContainer from './components/Header/HeaderContainer'
 import LoginPage from './components/Login/Login'
-import { connect } from 'react-redux'
-import { Component } from 'react'
-import { inititalizeApp } from './redux/app-reducer'
 import Preloader from './components/common/Preloader/Preloader'
+import { connect } from 'react-redux'
+import { inititalizeApp } from './redux/app-reducer'
 import store from './redux/redux-store'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import React from 'react'
 import { Paper } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
+import { MuiThemeProvider, createTheme } from '@material-ui/core/styles'
+
 import { useEffect } from 'react'
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#2b7a78',
+    },
+    secondary: {
+      main: '#E33E7F',
+    },
+  },
+})
 
 const App = (props) => {
   useEffect(() => {
@@ -66,7 +78,9 @@ const MainApp = (props) => {
     <React.StrictMode>
       <BrowserRouter>
         <Provider store={store}>
-          <AppContainer />
+          <MuiThemeProvider theme={theme}>
+            <AppContainer />
+          </MuiThemeProvider>
         </Provider>
       </BrowserRouter>
     </React.StrictMode>
