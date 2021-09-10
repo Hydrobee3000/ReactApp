@@ -6,35 +6,23 @@
   flex-grow: 1;
 }
 
-.authorization__block {
-  margin-right: 2vw;
-  margin-left: auto;
-  align-self: center;
-}
-
-.authorization__block a {
-  color: #000;
-}
-
-.menu__button {
-  margin-right: 2px;
-}
-
-.auth__button {
+/* .auth__button {
   max-width: 4vw;
   max-height: 6vh;
-}
+} */
 
-.login__block {
-  display: flex;
-}
-
-.login__text {
+/* .login__text {
   font-size: 2vh;
   align-self: center;
   margin-right: 1vw;
+} */
+
+.login__button {
+  color: #f6fdfc;
+  text-decoration: none;
 }
 
+/* links in list of menu  */
 ul a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.884);

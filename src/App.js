@@ -52,7 +52,7 @@ const App = (props) => {
             </Paper>
           </Grid>
           <Grid item xs={10}>
-            <Paper>
+            <Paper color='#f6fdfc'>
               <div className='app-wrapper-content'>
                 <Route path='/dialogs' render={() => <DialogsContainer />} />
                 <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
