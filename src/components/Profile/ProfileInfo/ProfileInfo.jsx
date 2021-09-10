@@ -2,21 +2,11 @@ import Preloader from '../../common/Preloader/Preloader'
 import s from './ProfileInfo.module.css'
 import userPhoto from '../../../assets/images/user.png'
 import ProfileStatus from './ProfileStatus/ProfileStatus'
-import { makeStyles } from '@material-ui/core/styles'
 import IconButton from '@material-ui/core/IconButton'
 import PhotoCamera from '@material-ui/icons/PhotoCamera'
 import { Paper } from '@material-ui/core'
 
-const useStyles = makeStyles((theme) => ({
-  input: {
-    display: 'none',
-  },
-  button: {},
-}))
-
 const ProfileInfo = (props) => {
-  const classes = useStyles()
-
   if (!props.profile) {
     return <Preloader />
   }
@@ -35,14 +25,14 @@ const ProfileInfo = (props) => {
             <div className={s.select__image}>
               <input
                 accept='image/*'
-                className={classes.input}
+                className={s.select__image_input}
                 id='icon-button-file'
                 type='file'
                 onChange={onMainPhotoSelected}
               />
               <label htmlFor='icon-button-file'>
                 <IconButton className={s.button__load_image} color='primary' aria-label='upload picture' component='div'>
-                  <PhotoCamera className={s.icon__load_image} />
+                  <PhotoCamera />
                 </IconButton>
               </label>
             </div>

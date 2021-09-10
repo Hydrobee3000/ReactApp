@@ -24,13 +24,13 @@
   position: absolute;
 }
 
+.select__image_input {
+  display: none;
+}
+
 .button__load_image {
   height: 1vh;
   width: 1vh;
-}
-
-.icon__load_image {
-  color: #2b7a77;
 }
 
 .main__photo {
