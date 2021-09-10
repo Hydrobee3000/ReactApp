@@ -16,16 +16,16 @@ import React from 'react'
 import { Paper } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import { MuiThemeProvider, createTheme } from '@material-ui/core/styles'
-
 import { useEffect } from 'react'
 
+//theme for Material UI
 const theme = createTheme({
   palette: {
     primary: {
       main: '#2b7a78',
     },
     secondary: {
-      main: '#E33E7F',
+      main: '#f6fdfc',
     },
   },
 })

@@ -1,7 +1,6 @@
 import s from './User.module.css'
 import userPhoto from '../../../assets/images/user.png'
 import { NavLink } from 'react-router-dom'
-import { ColorButton } from '../../common/Buttons/Buttons'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
@@ -40,7 +39,7 @@ const User = ({ user, ...props }) => {
           </Button>
         ) : (
           <Button
-            variant='outlined'
+            variant='contained'
             color='primary'
             className={s.button}
             disabled={props.followingInProgress.some((id) => id === user.id)}
