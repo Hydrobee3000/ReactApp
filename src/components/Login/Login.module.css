@@ -1,4 +1,6 @@
 .login__wrapper {
+  min-height: 88vh;
+  margin-left: 1%;
 }
 
 .login__form {
@@ -15,13 +17,10 @@
 }
 
 .button__wrapper {
+  margin-top: 1%;
 }
 
 .button {
-  background-color: #17252a;
-  color: #3aafa9;
-  font-family: 1px solid #2b7a78;
-  font-size: 1.5vh;
   padding: 1vh;
   border: 1px solid #2b7a78;
   border-radius: 5px;
