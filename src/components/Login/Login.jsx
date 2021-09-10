@@ -43,7 +43,21 @@ const LoginForm = (props) => {
         <div className={s.checkbox}>
           <Field type={'checkbox'} name={'rememberMe'} component={'input'} /> remember me
         </div>
-        {props.captchaUrl && <img src={props.captchaUrl} alt='captcha' />}
+        {props.captchaUrl && (
+          <div className={s.captcha__container}>
+            <img src={props.captchaUrl} alt='captcha' />
+            <Field
+              placeholder={'Symbols from image'}
+              name={'captcha'}
+              component={Input}
+              label={'Captcha'}
+              id={'outlined-basic'}
+              variant={'outlined'}
+              validate={[required]}
+            />
+          </div>
+        )}
+        {/* captcha */}
         {props.error && <div className={s.form__summary_error}>{props.error}</div>}
         <div className={s.button__wrapper}>
           <button className={s.button}>Login</button>
@@ -57,7 +71,7 @@ const LoginReduxForm = reduxForm({ form: 'login' })(LoginForm)
 
 const Login = (props) => {
   const onSubmit = (formData) => {
-    props.login(formData.email, formData.password, formData.rememberMe)
+    props.login(formData.email, formData.password, formData.rememberMe, formData.captcha)
   }
 
   if (props.isAuth) {
