@@ -7,7 +7,7 @@ const AddPostForm = (props) => {
   return (
     <form className={s.form__post} onSubmit={props.handleSubmit}>
       <div>
-        <Field className={s.add__post_field} component={'textarea'} placeholder='Enter your message' name='postText' />
+        <Field className={s.add__post_field} component={Textarea} placeholder='Enter your message' name='postText' />
       </div>
       <div>
         <button variant='contained' color='primary' className={s.add__message_button}>
