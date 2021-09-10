@@ -43,9 +43,10 @@
   width: 80%;
 }
 
-.name {
-  font-size: 3vh;
-}
 .block__status_name h3 {
   font-size: 2vh;
+}
+
+.name {
+  font-size: 3vh;
 }

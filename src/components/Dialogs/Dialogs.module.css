@@ -16,13 +16,13 @@
   align-items: center;
   padding-top: 1vh;
   padding-bottom: 1vh;
-  font-size: 1vw;
+  font-size: 2vh;
 }
 
 .link {
   text-decoration: none;
   color: #000;
-  font-size: 1vw;
+  font-size: 2vh;
 }
 
 .messages__container {
@@ -32,7 +32,7 @@
   padding: 1.5vh;
 }
 .message__item {
-  font-size: 1vw;
+  font-size: 2vh;
   margin-bottom: auto;
 }
 

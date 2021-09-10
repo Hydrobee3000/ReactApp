@@ -46,12 +46,12 @@ const App = (props) => {
               <HeaderContainer />
             </Paper>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={3}>
             <Paper>
               <Navbar />
             </Paper>
           </Grid>
-          <Grid item xs={10}>
+          <Grid item xs={9}>
             <Paper color='#f6fdfc'>
               <div className='app-wrapper-content'>
                 <Route path='/dialogs' render={() => <DialogsContainer />} />

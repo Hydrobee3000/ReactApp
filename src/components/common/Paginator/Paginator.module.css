@@ -1,8 +1,8 @@
 .paginator {
   display: flex;
   justify-content: space-between;
-  width: 50%;
-  max-width: 200px;
+
+  max-width: 100%;
 }
 
 .page__selected {
