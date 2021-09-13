@@ -1,7 +1,6 @@
 .posts__block {
   width: 100%;
-  font-size: 16px;
-  font-size: 1.6vw;
+  font-size: 1em;
 }
 
 .posts__block h3 {

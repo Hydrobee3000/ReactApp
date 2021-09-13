@@ -1,10 +1,10 @@
 .dialogs__container {
   display: flex;
-  background-color: #ebf7f5;
+  background-color: #e2ebe99a;
 }
 
 .dialogs__items {
-  width: 12vw;
+  width: 10%;
   min-height: 91vh;
   max-height: 100%;
   border-right: 0.2vh solid #2b7a78;

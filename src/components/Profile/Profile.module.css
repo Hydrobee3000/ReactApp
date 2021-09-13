@@ -1,7 +1,8 @@
 .profile {
   display: flex;
   flex-direction: column;
-  background-color: #ebf7f5;
+  background-color: #e2ebe99a;
   min-height: 91vh;
   padding-left: 1%;
+  font-size: 14px;
 }

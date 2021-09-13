@@ -1,14 +1,14 @@
 .post_container {
   display: flex;
-  margin-bottom: 1.3vh;
+  margin-bottom: 1%;
   height: 13vh;
   margin-right: 1%;
 }
 
 .image__container {
   align-self: center;
-  margin: 1vh;
-  height: 80%;
+  height: 90%;
+  margin-left: 0.2%;
 }
 
 .details__container {
@@ -19,7 +19,7 @@
 }
 
 .post__text {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .like__wrapper {
