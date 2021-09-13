@@ -16,7 +16,6 @@ import { Paper } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import { MuiThemeProvider, createTheme } from '@material-ui/core/styles'
 import { useEffect } from 'react'
-import Navbar from './components/Navbar/Navbar'
 
 //theme for Material UI
 const theme = createTheme({
@@ -46,6 +45,7 @@ const App = (props) => {
               <HeaderContainer />
             </Paper>
           </Grid>
+
           <Grid item xs={12}>
             <Paper color='#f6fdfc'>
               <div className='app-wrapper-content'>

@@ -9,26 +9,43 @@ import MenuIcon from '@material-ui/icons/Menu'
 import AccountCircle from '@material-ui/icons/AccountCircle'
 import MenuItem from '@material-ui/core/MenuItem'
 import Menu from '@material-ui/core/Menu'
+import Navbar from './../Navbar/Navbar'
+import { SwipeableDrawer } from '@material-ui/core'
 
 const Header = (props) => {
-  const [anchorEl, setAnchorEl] = React.useState(null)
-  const open = Boolean(anchorEl)
+  const [anchor, setAnchor] = React.useState(null)
+  const open = Boolean(anchor)
+
+  const [menuBar, setMenuBar] = React.useState(null)
+  const openMenuBar = Boolean(menuBar)
 
   const handleMenu = (event) => {
-    setAnchorEl(event.currentTarget)
+    setAnchor(event.currentTarget)
+  }
+  const handleClose = () => {
+    setAnchor(null)
   }
 
-  const handleClose = () => {
-    setAnchorEl(null)
+  const toggleDrawer = (isOpenBar) => (event) => {
+    if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return
+    }
+    setMenuBar(isOpenBar)
   }
 
   return (
     <header>
       <AppBar className={s.header} position='static'>
         <Toolbar>
-          <IconButton edge='start' color='inherit' aria-label='menu'>
-            <MenuIcon />
-          </IconButton>
+          <React.Fragment>
+            <IconButton onClick={toggleDrawer(true)} edge='start' color='inherit' aria-label='menu'>
+              <MenuIcon />
+            </IconButton>
+            <SwipeableDrawer open={menuBar} onClose={toggleDrawer(false)} onOpen={toggleDrawer(true)}>
+              <Navbar />
+            </SwipeableDrawer>
+          </React.Fragment>
+
           <Typography variant='h6' className={s.title}>
             HydroBee
           </Typography>
@@ -45,7 +62,7 @@ const Header = (props) => {
             </IconButton>
             <Menu
               id='menu-appbar'
-              anchorEl={anchorEl}
+              anchorEl={anchor}
               anchorOrigin={{
                 vertical: 'top',
                 horizontal: 'right',
