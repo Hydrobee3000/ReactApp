@@ -45,10 +45,11 @@ const ProfileInfo = (props) => {
         </div>
       </div>
       <div className={s.details__block}>
-        <div className={s.block__status_name}>
-          <h1 className={s.name}>{props.profile.fullName}</h1>
-
-          <h3>Status: {props.profile.aboutMe}</h3>
+        <div className={s.name}>
+          <h1>{props.profile.fullName}</h1>
+        </div>
+        <div className={s.status}>
+          <h3>Status: </h3>
           <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
         </div>
       </div>

@@ -20,7 +20,7 @@ const ProfileStatus = (props) => {
   }
 
   return (
-    <div className={s.status__input}>
+    <div className={s.status}>
       {!editMode && (
         <span>
           <span onDoubleClick={activateEditMode}>{props.status || '----'}</span>

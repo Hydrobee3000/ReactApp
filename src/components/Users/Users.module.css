@@ -1,5 +1,5 @@
 .users__container {
-  background-color: #ebf7f5;
+  background-color: #f0f0f0ce;
   min-height: 91vh;
 }
 
@@ -8,5 +8,5 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: start;
 }

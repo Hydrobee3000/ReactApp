@@ -1,4 +1,5 @@
-.status__input {
-  font-size: 2vh;
+.status {
+  font-size: 1em;
   max-width: 40%;
+  margin-bottom: 2%;
 }

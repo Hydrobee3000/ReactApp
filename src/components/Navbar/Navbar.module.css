@@ -3,6 +3,7 @@
   flex-direction: column;
   background-color: #0e4f4d;
   min-width: 200px;
+  height: 100%;
 }
 
 .link {

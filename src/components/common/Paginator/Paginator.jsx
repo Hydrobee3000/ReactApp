@@ -2,7 +2,7 @@ import s from './Paginator.module.css'
 import { useState } from 'react'
 import classnames from 'classnames'
 
-const Paginator = ({ totalItemsCount, pageSize, currentPage, onPageChanged, portionSize = 10 }) => {
+const Paginator = ({ totalItemsCount, pageSize, currentPage, onPageChanged, portionSize = 6 }) => {
   const pagesCount = Math.ceil(totalItemsCount / pageSize)
 
   const pages = [] //create array of pages
