@@ -18,8 +18,10 @@
 
 .link:hover {
   color: #def2f1;
+  background-color: rgba(18, 99, 96, 0.761);
 }
 
 .item a.active {
   color: #def2f1;
+  background-color: rgb(16, 88, 86);
 }

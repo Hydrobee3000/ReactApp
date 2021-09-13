@@ -19,11 +19,11 @@
 }
 
 .post__text {
-  font-size: 1rem;
+  font-size: 1.2em;
 }
 
 .like__wrapper {
-  width: 4%;
+  width: 3%;
   min-width: 15px;
   background-color: #2b7a77;
 }

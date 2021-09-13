@@ -1,6 +1,7 @@
 .dialogs__container {
   display: flex;
   background-color: #e2ebe99a;
+  font-size: 1em;
 }
 
 .dialogs__items {
@@ -14,34 +15,31 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  font-size: 2vh;
+  padding-top: 15%;
+  padding-bottom: 15%;
 }
 
 .link {
   text-decoration: none;
   color: #000;
-  font-size: 2vh;
 }
 
 .messages__container {
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding: 1.5vh;
+  padding: 0.6em;
 }
 .message__item {
-  font-size: 2vh;
   margin-bottom: auto;
+}
+
+.message {
+  font-size: 1.5em;
 }
 
 .message__send_field {
   margin-bottom: 1%;
-}
-
-.message {
-  font-size: 1em;
 }
 
 .form__message {
@@ -51,7 +49,7 @@
 
 .add__message_field {
   resize: none;
-  min-height: 15vh;
+  min-height: 100px;
   min-width: 20vw;
   font-size: 2vh;
   margin-bottom: 1vh;
