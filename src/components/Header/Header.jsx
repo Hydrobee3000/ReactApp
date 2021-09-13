@@ -17,7 +17,6 @@ const Header = (props) => {
   const open = Boolean(anchor)
 
   const [menuBar, setMenuBar] = React.useState(null)
-  const openMenuBar = Boolean(menuBar)
 
   const handleMenu = (event) => {
     setAnchor(event.currentTarget)

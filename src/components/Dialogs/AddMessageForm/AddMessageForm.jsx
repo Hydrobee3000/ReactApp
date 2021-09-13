@@ -19,9 +19,7 @@ const AddMessageForm = (props) => {
         />
       </div>
       <div className={s.wrapper__button}>
-        <ColorButton variant='contained' color='primary' className={s.add__message_button}>
-          Send
-        </ColorButton>
+        <button className={s.add__message_button}>Send</button>
       </div>
     </form>
   )
