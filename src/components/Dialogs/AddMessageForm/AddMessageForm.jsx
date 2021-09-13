@@ -2,7 +2,6 @@ import { Field, reduxForm } from 'redux-form'
 import { maxLengthCreator, required } from '../../../utils/validators/validarors'
 import { Textarea } from '../../common/FormsControls/FormsControls'
 import s from './../Dialogs.module.css'
-import { ColorButton } from '../../common/Buttons/Buttons'
 
 const maxLength50 = maxLengthCreator(50)
 

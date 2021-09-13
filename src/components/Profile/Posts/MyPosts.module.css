@@ -12,6 +12,8 @@
 }
 
 .form__post {
+  display: flex;
+  flex-direction: column;
 }
 
 .add__post_field {

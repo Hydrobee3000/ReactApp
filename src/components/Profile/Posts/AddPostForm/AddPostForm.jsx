@@ -10,7 +10,7 @@ const AddPostForm = (props) => {
         <Field className={s.add__post_field} component={Textarea} placeholder='Enter your message' name='postText' />
       </div>
       <div>
-        <button className={s.add__message_button}>Add post</button>
+        <button className={s.add__post_button}>Add post</button>
       </div>
     </form>
   )
