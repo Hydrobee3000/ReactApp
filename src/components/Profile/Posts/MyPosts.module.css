@@ -1,17 +1,27 @@
-.posts__block {
+.posts__container {
   width: 100%;
   font-size: 1em;
 }
 
-.posts__block h3 {
+.posts__container h3 {
   font-size: 4vh;
+}
+
+.posts__wrapper {
+  padding-left: 1em;
+  padding-bottom: 1em;
 }
 
 .posts {
   margin-top: 3vh;
 }
 
-.form__post {
+.form_post__container {
+  padding: 0 0 1em 1em;
+  margin-right: 1em;
+}
+
+.form_post {
   display: flex;
   flex-direction: column;
 }
