@@ -20,11 +20,10 @@ const Paginator = ({ totalItemsCount, pageSize, currentPage, onPageChanged, port
     <div className={s.paginator}>
       {portionNumber > 1 && ( // button (previous) appears if we are not on the first portion
         <button
-          className={s.previous__button}
+          className={s.button}
           onClick={() => {
             setPortionNumber(portionNumber - 1) //showing the previous portion
-          }}
-        >
+          }}>
           prev
         </button>
       )}
@@ -38,24 +37,22 @@ const Paginator = ({ totalItemsCount, pageSize, currentPage, onPageChanged, port
                 {
                   [s.page__selected]: currentPage === page, //if the page is current - className = page__selected
                 },
-                s.page__number //else className = page__number
+                s.page__number //and className = page__number
               )}
               key={page}
               onClick={(e) => {
                 onPageChanged(page) //redirection to the page
-              }}
-            >
+              }}>
               {page}
             </button>
           )
         })}
       {portionCount > portionNumber && ( // button (next) appears if we are not on the last portion
         <button
-          className={s.next__button}
+          className={s.button}
           onClick={() => {
             setPortionNumber(portionNumber + 1) //showing the next portion
-          }}
-        >
+          }}>
           next
         </button>
       )}

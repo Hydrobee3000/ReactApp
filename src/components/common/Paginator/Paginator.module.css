@@ -3,18 +3,34 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  margin: 0.2em;
+  margin-top: 0.4em;
+  margin-bottom: 0.2em;
+}
+
+.page__number {
+  border: 0.1vh solid #52aaa6;
+  border-radius: 50%;
+  padding: 1em;
+}
+
+.page__number:hover {
+  background-color: #52aaa6;
+  color: #f6fdfc;
 }
 
 .page__selected {
   font-weight: bold;
+  background-color: #52aaa6;
+  color: #f6fdfc;
 }
 
-.page__number {
+.button {
+  border: 0.1vh solid #52aaa6;
+  border-radius: 50%;
+  padding: 1em;
 }
 
-.previous__button {
-}
-
-.next__button {
+.button:hover {
+  background-color: #52aaa6;
+  color: #f6fdfc;
 }
