@@ -49,6 +49,7 @@ const App = (props) => {
           <Grid item xs={12}>
             <Paper color='#f6fdfc'>
               <div className='app-wrapper-content'>
+                <Route exact path='/' component={ProfileContainer} />
                 <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
                 <Route path='/dialogs' render={() => <DialogsContainer />} />
                 <Route path='/users' render={() => <UsersContainer />} />
