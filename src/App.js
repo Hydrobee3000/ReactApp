@@ -1,5 +1,5 @@
 import './App.css'
-import { Route } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import DialogsContainer from './components/Dialogs/DialogsContainer'
 import UsersContainer from './components/Users/UsersContainer'
 import ProfileContainer from './components/Profile/ProfileContainer'
@@ -49,7 +49,10 @@ const App = (props) => {
           <Grid item xs={12}>
             <Paper color='#f6fdfc'>
               <div className='app-wrapper-content'>
-                <Route exact path='/' component={ProfileContainer} />
+                <Route exact path='/'>
+                  <Redirect to='/profile' />
+                </Route>
+
                 <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
                 <Route path='/dialogs' render={() => <DialogsContainer />} />
                 <Route path='/users' render={() => <UsersContainer />} />
