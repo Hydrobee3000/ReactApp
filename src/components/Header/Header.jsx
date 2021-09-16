@@ -9,21 +9,18 @@ import MenuIcon from '@material-ui/icons/Menu'
 import AccountCircle from '@material-ui/icons/AccountCircle'
 import MenuItem from '@material-ui/core/MenuItem'
 import Menu from '@material-ui/core/Menu'
-import Navbar from './../Navbar/Navbar'
 import { SwipeableDrawer } from '@material-ui/core'
+import { useState } from 'react'
+import Navbar from './../Navbar/Navbar'
 
 const Header = (props) => {
-  const [anchor, setAnchor] = React.useState(null)
+  const [anchor, setAnchor] = useState(null)
   const open = Boolean(anchor)
-
-  const [menuBar, setMenuBar] = React.useState(null)
-
   const handleMenu = (event) => {
     setAnchor(event.currentTarget)
   }
-  const handleClose = () => {
-    setAnchor(null)
-  }
+
+  const [menuBar, setMenuBar] = useState(null)
 
   const toggleDrawer = (isOpenBar) => (event) => {
     if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -36,14 +33,13 @@ const Header = (props) => {
     <header>
       <AppBar className={s.header} position='static'>
         <Toolbar>
-          <React.Fragment>
-            <IconButton onClick={toggleDrawer(true)} edge='start' color='inherit' aria-label='menu'>
-              <MenuIcon />
-            </IconButton>
-            <SwipeableDrawer open={menuBar} onClose={toggleDrawer(false)} onOpen={toggleDrawer(true)}>
-              <Navbar />
-            </SwipeableDrawer>
-          </React.Fragment>
+          <IconButton onClick={toggleDrawer(true)} edge='start' color='inherit' aria-label='open drawer'>
+            <MenuIcon />
+          </IconButton>
+
+          <SwipeableDrawer open={menuBar} onClose={toggleDrawer(false)} onOpen={() => {}}>
+            <Navbar toggleDrawer={toggleDrawer} />
+          </SwipeableDrawer>
 
           <Typography variant='h6' className={s.title}>
             HydroBee
@@ -55,8 +51,7 @@ const Header = (props) => {
               aria-controls='menu-appbar'
               aria-haspopup='true'
               onClick={handleMenu}
-              color='inherit'
-            >
+              color='inherit'>
               <AccountCircle />
             </IconButton>
             <Menu
@@ -72,19 +67,30 @@ const Header = (props) => {
                 horizontal: 'right',
               }}
               open={open}
-              onClose={handleClose}
-            >
+              onClose={() => {
+                setAnchor(null)
+              }}>
               {props.isAuth ? (
                 <>
                   <NavLink to='/profile'>
-                    <MenuItem onClick={handleClose}>Profile</MenuItem>
+                    <MenuItem
+                      onClick={() => {
+                        setAnchor(null)
+                      }}>
+                      Profile
+                    </MenuItem>
                   </NavLink>
                   <MenuItem onClick={props.logout}>Log out</MenuItem>
                 </>
               ) : (
                 <>
                   <NavLink to={'/login'}>
-                    <MenuItem onClick={handleClose}>Login</MenuItem>
+                    <MenuItem
+                      onClick={() => {
+                        setAnchor(null)
+                      }}>
+                      Login
+                    </MenuItem>
                   </NavLink>
                 </>
               )}

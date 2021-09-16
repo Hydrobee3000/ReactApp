@@ -9,14 +9,14 @@ import Preloader from './components/common/Preloader/Preloader'
 import { connect } from 'react-redux'
 import { inititalizeApp } from './redux/app-reducer'
 import store from './redux/redux-store'
-import { BrowserRouter } from 'react-router-dom'
+//import { BrowserRouter as Router} from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import React from 'react'
 import { Paper } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import { MuiThemeProvider, createTheme } from '@material-ui/core/styles'
 import { useEffect } from 'react'
-import Navbar from './components/Navbar/Navbar'
 
 //theme for Material UI
 const theme = createTheme({
@@ -49,8 +49,8 @@ const App = (props) => {
           <Grid item xs={12}>
             <Paper color='#f6fdfc'>
               <div className='app-wrapper-content'>
-                <Route path='/dialogs' render={() => <DialogsContainer />} />
                 <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
+                <Route path='/dialogs' render={() => <DialogsContainer />} />
                 <Route path='/users' render={() => <UsersContainer />} />
                 <Route path='/login' render={() => <LoginPage />} />
               </div>
@@ -71,13 +71,13 @@ let AppContainer = connect(mapStateToProps, { inititalizeApp })(App)
 const MainApp = (props) => {
   return (
     <React.StrictMode>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Router basename={process.env.PUBLIC_URL}>
         <Provider store={store}>
           <MuiThemeProvider theme={theme}>
             <AppContainer />
           </MuiThemeProvider>
         </Provider>
-      </BrowserRouter>
+      </Router>
     </React.StrictMode>
   )
 }
