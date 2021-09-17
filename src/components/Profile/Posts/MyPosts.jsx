@@ -4,7 +4,7 @@ import Post from './Post/Post'
 import { Field, reduxForm } from 'redux-form'
 import { maxLengthCreator, required } from '../../../utils/validators/validarors'
 import { Textarea } from '../../common/FormsControls/FormsControls'
-import { Paper } from '@material-ui/core'
+import { Card } from '@material-ui/core'
 
 const maxLength100 = maxLengthCreator(100)
 
@@ -34,12 +34,10 @@ const MyPosts = (props) => {
 
   return (
     <div className={s.posts__container}>
-      <Paper>
-        <div className={s.form_post__container}>
-          <h2>My posts</h2>
-          <AddNewPostFormRedux onSubmit={onAddPost} />
-        </div>
-      </Paper>
+      <Card className={s.form_post__container}>
+        <h2>My posts</h2>
+        <AddNewPostFormRedux onSubmit={onAddPost} />
+      </Card>
 
       <div className={s.posts}>{postsElements}</div>
     </div>

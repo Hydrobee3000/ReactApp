@@ -52,7 +52,6 @@ const App = (props) => {
                 <Route exact path='/'>
                   <Redirect to='/profile' />
                 </Route>
-
                 <Route path='/profile/:userId?' render={() => <ProfileContainer />} />
                 <Route path='/dialogs' render={() => <DialogsContainer />} />
                 <Route path='/users' render={() => <UsersContainer />} />

@@ -4,7 +4,7 @@
 }
 
 .posts__container h3 {
-  font-size: 4vh;
+  font-size: 2em;
 }
 
 .posts__wrapper {
@@ -17,8 +17,9 @@
 }
 
 .form_post__container {
-  padding: 0 0 1em 1em;
-  margin-right: 1em;
+  padding: 0 0 0.5em 1em;
+  margin-top: 1em;
+  margin-right: 1%;
 }
 
 .form_post {
@@ -28,8 +29,8 @@
 
 .add__post_field {
   resize: none;
-  min-height: 15vh;
-  min-width: 20vw;
-  font-size: 2vh;
-  margin-bottom: 1vh;
+  min-height: 4em;
+  min-width: 20em;
+  font-size: 1em;
+  margin-bottom: 0.4em;
 }
