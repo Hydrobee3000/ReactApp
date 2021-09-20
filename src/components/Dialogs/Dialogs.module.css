@@ -40,15 +40,10 @@
   margin-bottom: 1%;
 }
 
-.form__message {
-  display: flex;
-  flex-direction: column;
-}
-
 .add__message_field {
   resize: none;
   min-height: 100px;
-  min-width: 20vw;
+  min-width: 20em;
   font-size: 2vh;
   margin-bottom: 1vh;
 }

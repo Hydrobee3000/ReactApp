@@ -1,3 +1,4 @@
+import { Button } from '@material-ui/core'
 import { Field, reduxForm } from 'redux-form'
 import { maxLengthCreator, required } from '../../../utils/validators/validarors'
 import { Textarea } from '../../common/FormsControls/FormsControls'
@@ -17,9 +18,9 @@ const AddMessageForm = (props) => {
           name='newMessageBody'
         />
       </div>
-      <div className={s.wrapper__button}>
-        <button className={s.add__message_button}>Send</button>
-      </div>
+      <Button variant='outlined' onClick={props.handleSubmit} className={s.add__message_button}>
+        Send
+      </Button>
     </form>
   )
 }
