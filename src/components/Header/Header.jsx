@@ -20,7 +20,7 @@ const Header = (props) => {
     setAnchor(event.currentTarget)
   }
 
-  const [menuBar, setMenuBar] = useState(null)
+  const [menuBar, setMenuBar] = useState(false)
 
   const toggleDrawer = (isOpenBar) => (event) => {
     if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -37,8 +37,8 @@ const Header = (props) => {
             <MenuIcon />
           </IconButton>
 
-          <SwipeableDrawer open={menuBar} onClose={toggleDrawer(false)} onOpen={() => {}}>
-            <Navbar toggleDrawer={toggleDrawer} />
+          <SwipeableDrawer open={menuBar} onClose={toggleDrawer(false)} onOpen={toggleDrawer(true)}>
+            <Navbar onClose={toggleDrawer} />
           </SwipeableDrawer>
 
           <Typography variant='h6' className={s.title}>
