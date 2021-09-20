@@ -1,27 +1,8 @@
+import { Card } from '@material-ui/core'
 import { React } from 'react'
+import AddNewPostFormRedux from './AddNewPost/AddNewPostForm'
 import s from './MyPosts.module.css'
 import Post from './Post/Post'
-import { Field, reduxForm } from 'redux-form'
-import { maxLengthCreator, required } from '../../../utils/validators/validarors'
-import { Textarea } from '../../common/FormsControls/FormsControls'
-import { Card } from '@material-ui/core'
-
-const maxLength100 = maxLengthCreator(100)
-
-const AddNewPostForm = (props) => {
-  return (
-    <form className={s.form_post} onSubmit={props.handleSubmit}>
-      <div>
-        <Field className={s.add__post_field} component={Textarea} name='newPostText' validate={[required, maxLength100]} />
-      </div>
-      <div>
-        <button className={s.add__post_button}>Add post</button>
-      </div>
-    </form>
-  )
-}
-
-const AddNewPostFormRedux = reduxForm({ form: 'ProfileAddNewPostForm' })(AddNewPostForm)
 
 const MyPosts = (props) => {
   let postsElements = props.posts.map((post) => (
