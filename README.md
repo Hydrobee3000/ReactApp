@@ -4,6 +4,9 @@
 ## Demo
 >https://hydrobee3000.github.io/social-network/#/social-network/profile
 
+login: serena5552@list.ru
+pass: testingPass
+
 ## Technologies used
 
 >### `React`
