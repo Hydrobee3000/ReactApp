@@ -30,7 +30,8 @@
 .add__post_field {
   resize: none;
   min-height: 4em;
-  min-width: 20em;
   font-size: 1em;
+  width: 90%;
+  max-width: 40em;
   margin-bottom: 0.4em;
 }
