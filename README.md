@@ -41,5 +41,5 @@
 >>![navigation](https://user-images.githubusercontent.com/68890796/138444395-38db2b28-3751-4689-8ca5-df733aa66f84.jpg)
 >### Users page: 
 >>![users](https://user-images.githubusercontent.com/68890796/138444391-2b45a015-10a7-442f-b193-0af47692a3b4.jpg)
->### Click on icon: 
+>### Click on icon menu: 
 >>![icon](https://user-images.githubusercontent.com/68890796/138444392-c3f83d24-7e6d-4cd9-93d6-b11064708204.jpg)
