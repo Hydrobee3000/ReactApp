@@ -1,4 +1,4 @@
-# Social Network project on React/Redux
+# Social Network project on `React/Redux`
 
 
 ## Demo
