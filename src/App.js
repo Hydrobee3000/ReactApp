@@ -17,7 +17,8 @@ import { Paper } from '@material-ui/core'
 import Grid from '@material-ui/core/Grid'
 import { MuiThemeProvider, createTheme } from '@material-ui/core/styles'
 import { useEffect } from 'react'
-import { Settings } from './components/Settings/Settings'
+import { Weather } from './components/Weather/Weather'
+import { Converter } from './components/Converter/Converter'
 
 //theme for Material UI
 const theme = createTheme({
@@ -57,8 +58,8 @@ const App = (props) => {
                 <Route path='/dialogs' render={() => <DialogsContainer />} />
                 <Route path='/users' render={() => <UsersContainer />} />
                 <Route path='/login' render={() => <LoginPage />} />
-                <Route path='/weather' render={() => <Settings />} />
-                <Route path='/settings' render={() => <Settings />} />
+                <Route path='/weather' render={() => <Weather />} />
+                <Route path='/converter' render={() => <Converter />} />
               </div>
             </Paper>
           </Grid>

@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router-dom'
 import s from './Navbar.module.css'
-import Divider from '@material-ui/core/Divider'
 
 // nested in the Header
 
@@ -27,11 +26,9 @@ const Navbar = (props) => {
           Weather
         </NavLink>
       </div>
-      <Divider />
-
       <div className={s.item}>
-        <NavLink className={s.link} activeClassName={s.active} onClick={props.onClose()} to='/settings'>
-          Settings
+        <NavLink className={s.link} activeClassName={s.active} onClick={props.onClose()} to='/converter'>
+          Currency
         </NavLink>
       </div>
     </nav>
