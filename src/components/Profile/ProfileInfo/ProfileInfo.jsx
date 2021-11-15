@@ -4,6 +4,7 @@ import ProfileStatus from './ProfileStatus/ProfileStatus'
 import IconButton from '@material-ui/core/IconButton'
 import PhotoCamera from '@material-ui/icons/PhotoCamera'
 import { Paper } from '@material-ui/core'
+import Typography from '@mui/material/Typography'
 
 const ProfileInfo = (props) => {
   const onMainPhotoSelected = (e) => {
@@ -40,13 +41,12 @@ const ProfileInfo = (props) => {
         </div>
       </div>
       <div className={s.details__block}>
-        <div className={s.name}>
-          <h1>{props.profile.fullName}</h1>
-        </div>
-        <div className={s.status}>
-          <h3>Status: </h3>
+        <Typography className={s.name} variant='h4' gutterBottom component='div'>
+          {props.profile.fullName}
+        </Typography>
+        <Typography className={s.status} variant='p' gutterBottom component='div'>
           <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
-        </div>
+        </Typography>
       </div>
     </Paper>
   )
