@@ -1,25 +1,37 @@
 import s from './Post.module.css'
-import UserLogo from '../../../common/UsersLogo/UserLogo'
 import Card from '@material-ui/core/Card'
-import CardMedia from '@material-ui/core/CardMedia'
 import CardContent from '@material-ui/core/CardContent'
 import CardActions from '@material-ui/core/CardActions'
 import FavoriteBorderRoundedIcon from '@material-ui/icons/FavoriteBorderRounded'
+import { Avatar, CardHeader } from '@material-ui/core'
+import userPhoto from '../../../../assets/images/user.png'
 
 const Post = (props) => {
   return (
     <Card className={s.post_container}>
-      <CardMedia className={s.image__container} title='user'>
-        <UserLogo profile={props.profile} />
-      </CardMedia>
+      <CardHeader
+        avatar={
+          <Avatar
+            // sx={{ bgcolor:  }}
+            src={props.profile.photos.large != null ? props.profile.photos.large : userPhoto}
+            aria-label='avatar'></Avatar>
+        }
+        // action={
+        //   <IconButton aria-label='settings'>
+        //     <MoreVertIcon />
+        //   </IconButton>
+        // }
+        title={props.profile.fullName}
+        subheader='few moments ago'>
+        <FavoriteBorderRoundedIcon className={s.like} />
+      </CardHeader>
+
       <div className={s.details__container}>
-        <CardContent className={s.post__text}>{props.message}</CardContent>
-        <CardActions className={s.like__wrapper}>
-          <div className={s.like}>
-            <FavoriteBorderRoundedIcon className={s.icon} />
-          </div>
+        <CardActions className={s.post__like__wrapper}>
+          <FavoriteBorderRoundedIcon className={s.like} />
           {/* <span>{props.likesCount}</span> */}
         </CardActions>
+        <CardContent className={s.post__text}>{props.message}</CardContent>
       </div>
     </Card>
   )

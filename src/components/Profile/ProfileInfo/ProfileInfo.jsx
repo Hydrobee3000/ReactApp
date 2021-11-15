@@ -1,4 +1,3 @@
-import Preloader from '../../common/Preloader/Preloader'
 import s from './ProfileInfo.module.css'
 import userPhoto from '../../../assets/images/user.png'
 import ProfileStatus from './ProfileStatus/ProfileStatus'
@@ -7,10 +6,6 @@ import PhotoCamera from '@material-ui/icons/PhotoCamera'
 import { Paper } from '@material-ui/core'
 
 const ProfileInfo = (props) => {
-  if (!props.profile) {
-    return <Preloader />
-  }
-
   const onMainPhotoSelected = (e) => {
     if (e.target.files.length) {
       props.savePhoto(e.target.files[0])

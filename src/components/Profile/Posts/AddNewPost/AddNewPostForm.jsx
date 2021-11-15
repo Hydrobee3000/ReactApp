@@ -8,9 +8,9 @@ const maxLength100 = maxLengthCreator(100)
 
 const AddNewPostForm = (props) => {
   return (
-    <form className={s.form_post} onSubmit={props.handleSubmit}>
+    <form onSubmit={props.handleSubmit}>
       <div>
-        <Field className={s.add__post_field} component={Textarea} name='newPostText' validate={[required, maxLength100]} />
+        <Field className={s.add_post__field} component={Textarea} name='newPostText' validate={[required, maxLength100]} />
       </div>
       <div>
         <Button variant='outlined' onClick={props.handleSubmit}>
