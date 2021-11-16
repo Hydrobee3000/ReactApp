@@ -38,16 +38,6 @@ const Dialogs = (props) => {
         </AppBar>
       </Grid>
     </Grid>
-
-    // <div className={s.dialogs__container}>
-    //   <div className={s.dialogs__items}>{dialogsElements}</div>
-    //   <div className={s.messages__container}>
-    //     <div className={s.message__item}>{messagesElements}</div>
-    //     <div className={s.message__send_field}>
-    //       <AddMessageForm onSubmit={addNewMessage} />
-    //     </div>
-    //   </div>
-    // </div>
   )
 }
 
