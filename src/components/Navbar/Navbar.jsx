@@ -31,6 +31,11 @@ const Navbar = (props) => {
           Currency
         </NavLink>
       </div>
+      <div className={s.item}>
+        <NavLink className={s.link} activeClassName={s.active} onClick={props.onClose()} to='/alarm'>
+          Alarm
+        </NavLink>
+      </div>
     </nav>
   )
 }

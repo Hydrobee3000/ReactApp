@@ -10,9 +10,9 @@ const initialState = {
     { id: 6, name: '6' },
   ],
   messages: [
-    { id: 1, message: 'hi' },
-    { id: 2, message: 'hello' },
-    { id: 3, message: 'privet' },
+    { id: 1, message: 'Never' },
+    { id: 2, message: 'Gonna' },
+    { id: 3, message: 'Give You Up' },
   ],
 }
 

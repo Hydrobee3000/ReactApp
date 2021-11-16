@@ -1,26 +1,20 @@
-/* */
 .dialogs__container {
   font-size: 1em;
-  background-color: #abe1d59a;
+  background-color: #f6fdfc;
   min-height: 100vh;
 }
-/* */
 .dialogs__items {
   height: 100vh;
   /* height: 100%; */
-  background-color: #e2ebe99a;
+  /* background-color: #e2ebe99a; */
   border-right: 0.2vh solid #2b7a78;
 }
-
-/* */
 .dialog__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #e2ebe99a;
   padding: 5% 0;
 }
-/* */
 .link {
   text-decoration: none;
   color: #000;
@@ -30,11 +24,14 @@
   padding: 0.6em;
 }
 .message__item {
+  display: flex;
+  flex-direction: column;
   margin-bottom: auto;
 }
 
 .message {
   font-size: 1.5em;
+  background-color: #fefefe;
 }
 
 .message__send_field {
@@ -48,7 +45,7 @@
 .add__message_field {
   resize: none;
   min-height: 4em;
-  min-width: 25em;
+  max-width: 25em;
   font-size: 2vh;
   margin: 1em;
   border-radius: 0.5em;

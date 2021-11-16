@@ -3,11 +3,10 @@ import DialogItem from './DialogItem/DialogItem'
 import Message from './Message/Message'
 import { Redirect } from 'react-router-dom'
 import AddMessageForm from './AddMessageForm/AddMessageForm'
-import Box from '@mui/material/Box'
-import Paper from '@mui/material/Paper'
 import Grid from '@mui/material/Grid'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
+import Stack from '@mui/material/Stack'
 
 const Dialogs = (props) => {
   let state = props.dialogsPage
@@ -28,9 +27,11 @@ const Dialogs = (props) => {
         {dialogsElements}
       </Grid>
       <Grid className={s.messages__container} item xs={10}>
-        <div className={s.message__item}>{messagesElements}</div>
+        <Stack className={s.message__item} spacing={2}>
+          {messagesElements}
+        </Stack>
         <div className={s.message__send_field}>{/* <AddMessageForm onSubmit={addNewMessage} /> */}</div>
-        <AppBar position='fixed' sx={{ top: 'auto', bottom: 0, backgroundColor: '#2b7a78' }}>
+        <AppBar position='fixed' sx={{ top: 'auto', bottom: 0, backgroundColor: '#546e6d' }}>
           <Toolbar style={{ alignSelf: 'center' }}>
             <AddMessageForm onSubmit={addNewMessage} />
           </Toolbar>
