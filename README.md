@@ -25,10 +25,12 @@
 >## Desktop
 >### Loader:
 >>![image](https://user-images.githubusercontent.com/68890796/138445679-e1e390a2-3581-4b2d-83a3-4ccdd721785a.png)
+>>>### Authorization page:
+>>![image](https://user-images.githubusercontent.com/68890796/141984638-3673a947-5008-4279-b92e-5563423794e9.png)
 >### Profile Page:
->>![image](https://user-images.githubusercontent.com/68890796/138445882-e4db08f6-5a24-4a2b-8b1d-21dac41beec8.png)
+>>![image](https://user-images.githubusercontent.com/68890796/141984419-1781a7ad-51d3-4359-84a1-91f4d431c7cb.jpg)
 >### Navigation menu: 
->>![image](https://user-images.githubusercontent.com/68890796/138446070-7e5ad6b1-679a-45de-898d-af255e816786.png)
+>>![image](https://user-images.githubusercontent.com/68890796/141984507-b2588daa-05ae-466a-a7e9-ddf00f01f7a1.png)
 >### Users page:
 >>![image](https://user-images.githubusercontent.com/68890796/138446261-481d5453-a1ef-4ce4-8198-7bee22942f16.png)
 
