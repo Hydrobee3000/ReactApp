@@ -13,12 +13,12 @@ const AddMessageForm = (props) => {
         <Field
           className={s.add__message_field}
           component={Textarea}
-          validate={[required, maxLength50]}
+          // validate={[required, maxLength50]}
           placeholder='Enter your message'
           name='newMessageBody'
         />
       </div>
-      <Button variant='outlined' onClick={props.handleSubmit} className={s.add__message_button}>
+      <Button className={s.add__message_button} variant='contained' color='middle' onClick={props.handleSubmit}>
         Send
       </Button>
     </form>
