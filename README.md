@@ -2,7 +2,7 @@
 
 
 ## Demo
->https://hydrobee3000.github.io/social-network/#/social-network/profile
+>https://hydrobee3000.github.io/social-network
 >>login: serena5552@list.ru
 >>pass: testingPass
 
