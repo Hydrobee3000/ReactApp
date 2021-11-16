@@ -7,6 +7,8 @@ import { login } from './../../redux/auth-reducer'
 import { Redirect } from 'react-router-dom'
 import s from './Login.module.css'
 import { Paper } from '@material-ui/core'
+import Typography from '@mui/material/Typography'
+import { Button } from '@mui/material'
 
 const maxLength20 = maxLengthCreator(20)
 const minLength4 = minLengthCreator(4)
@@ -17,9 +19,12 @@ const LoginForm = (props) => {
     <div className={s.login__container}>
       <Paper className={s.login__wrapper}>
         <form onSubmit={props.handleSubmit}>
-          <div className={s.name_field__wrapper}>
-            <h1>Login</h1>
-          </div>
+          {/* <div className={s.name_field__wrapper}> */}
+          <Typography className={s.name__field} variant='h4' gutterBottom component='div'>
+            Login
+          </Typography>
+          {/* <h1>Login</h1> */}
+          {/* </div> */}
 
           <div className={s.email__text_field}>
             <Field
@@ -63,9 +68,9 @@ const LoginForm = (props) => {
           )}
           {/* captcha */}
           {props.error && <div className={s.form__summary_error}>{props.error}</div>}
-          <div className={s.button__wrapper}>
-            <button className={s.button}>Login</button>
-          </div>
+          <Button onClick={props.handleSubmit} variant='outlined' style={{ color: '#2b7a78' }}>
+            Login
+          </Button>
         </form>
       </Paper>
     </div>
