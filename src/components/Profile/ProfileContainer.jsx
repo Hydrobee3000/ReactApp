@@ -1,4 +1,4 @@
-import Profile from './Profile'
+import Profile, { MemoizedProfile } from './Profile'
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { getUserProfile, getStatus, updateStatus } from '../../redux/profile-reducer'
@@ -21,7 +21,7 @@ const ProfileContainer = (props) => {
   })
 
   return (
-    <Profile
+    <MemoizedProfile
       {...props}
       isOwner={!props.match.params.userId}
       profile={props.profile}

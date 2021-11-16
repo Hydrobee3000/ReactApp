@@ -2,6 +2,7 @@ import s from './Profile.module.css'
 import ProfileInfo from './ProfileInfo/ProfileInfo'
 import MyPostsContainer from './Posts/MyPostsContainer'
 import Preloader from './../common/Preloader/Preloader'
+import React from 'react'
 
 const Profile = (props) => {
   if (!props.profile) {
@@ -20,4 +21,7 @@ const Profile = (props) => {
     </div>
   )
 }
+
+export const MemoizedProfile = React.memo(Profile)
+
 export default Profile
