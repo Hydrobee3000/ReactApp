@@ -18,7 +18,7 @@ const AddMessageForm = (props) => {
           name='newMessageBody'
         />
       </div>
-      <Button className={s.add__message_button} variant='contained' color='middle' onClick={props.handleSubmit}>
+      <Button variant='contained' color='middle' onClick={props.handleSubmit}>
         Send
       </Button>
     </form>

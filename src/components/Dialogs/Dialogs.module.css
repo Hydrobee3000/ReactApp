@@ -44,12 +44,16 @@
 
 .add__message_field {
   resize: none;
-  min-height: 4em;
-  max-width: 25em;
+  min-height: 60px;
+  min-width: 220px;
   font-size: 2vh;
   margin: 0.5em;
   padding: 0.5em;
   border-radius: 0.5em;
 }
-.add__message_button {
+
+@media (min-width: 700px) {
+  .add__message_field {
+    min-width: 420px;
+  }
 }
